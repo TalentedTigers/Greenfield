@@ -4,12 +4,13 @@ const session = require('express-session');
 const passport = require('passport');
 const Strategy = require('passport-github').Strategy;
 const auth = require('./auth');
-const github = require('../config/github.js').GITHUB_API_KEY;
+// const github = require('../config/github.js').GITHUB_API_KEY;
 const db = require ('../database/');
+require('dotenv').config();
 
 passport.use(new Strategy({
-  clientID: github.clientID,
-  clientSecret: github.clientSecret,
+  clientID: process.env.GITHUB_CLIENTID,
+  clientSecret: process.env.GITHUB_CLIENTSECRET,
   callbackURL: 'http://127.0.0.1:3000/api/auth/github/callback'
 }, (accessToken, refreshToken, profile, callback) => {
   db.User.find({

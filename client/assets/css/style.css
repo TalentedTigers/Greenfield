@@ -87,6 +87,10 @@ body {
   width: 100px;
 }
 
+#wait_time {
+  color: white;
+}
+
 .ticket_list_entry {
   background-color: #fff;
   border: 1px solid #eee;

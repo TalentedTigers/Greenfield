@@ -8,10 +8,7 @@ class WaitTime extends React.Component {
     this.state = {
       time: ''
     };
-  }
-
-  render() {
-    const socket = io(process.env.URL, {
+    this.socket = io('/', {
       transportOptions: {
         polling: {
           extraHeaders: {
@@ -22,10 +19,13 @@ class WaitTime extends React.Component {
       },
       reconnection: false
     });
-    // socket.emit('connected', () => {
-    //
-    // });
+    this.socket.emit('connected', {});
+  }
 
+  componentDidMount() {
+  }
+
+  render() {
     return (
       <div id="wait_time" className="col-md-4">
         Est. wait time {this.state.time}

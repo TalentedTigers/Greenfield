@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import TicketEntry from './ticketEntry.jsx';
 
-const TicketList = (props) => (
+const TicketList = ({user, ticketList, updateTickets}) => (
   <div className="ticket_list">
-    {props.ticketList.map((ticket, index) => <TicketEntry user={props.user} ticket={ticket} key={index} updateTickets={props.updateTickets} />)}
+    {ticketList.map((ticket, index) => <TicketEntry user={user} ticket={ticket} key={index} updateTickets={updateTickets} />)}
   </div>
 );
 

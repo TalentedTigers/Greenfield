@@ -1,12 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const githubAuth = require('./helpers/auth');
-const util = require('./helpers/util');
-const db = require ('../database/');
+const githubAuth = require('./auth');
+const util = require('../helpers/util');
+const db = require ('../../database/');
 
 router.use(githubAuth.initialize());
 router.use(githubAuth.session());
-router.use(express.static(__dirname + '/../client/'));
+router.use(express.static(__dirname + '/../../client/'));
 
 router.get('/api/auth/github', githubAuth.authenticate('github', { scope: [ 'user:email' ] }));
 
@@ -21,12 +21,15 @@ router.get('/api/users/:id', (req, res) => {
 router.get('/api/tickets/:id', (req, res) => {
   db.User.find({ where: { id: req.params.id } })
     .then(user => {
-      if (user.role === 'student') {
+      switch (user.role) {
+      case 'student':
         return db.Ticket.findAll({ where: { userId: user.id } });
-      } else if (user.role === 'mentor') {
+      case 'mentor':
         return db.Ticket.findAll({ where: { status: 'Opened' } });
-      } else if (user.role === 'admin') {
+      case 'admin':
         return db.Ticket.findAll();
+      default:
+        throw user;
       }
     })
     .then(result => {

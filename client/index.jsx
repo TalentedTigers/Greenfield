@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import io from 'socket.io-client';
 import TicketList from './components/ticketList.jsx';
 import TicketSubmission from './components/ticketSubmission.jsx';
 import Login from './components/login.jsx';
@@ -11,7 +12,8 @@ class App extends React.Component {
     this.state = {
       ticketList: [],
       ticketOptionList: ['React', 'Socket.IO', 'Recursion', 'Postgres'],
-      user: null
+      user: null,
+      waitTime: '1mins'
     };
   }
 
@@ -30,7 +32,23 @@ class App extends React.Component {
   }
 
   componentDidMount () {
-    this.state.user ? this.getTickets() : null;
+    if (this.state.user) {
+      this.getTickets();
+      this.broadcastMsg();
+    }
+  }
+
+  broadcastMsg() {
+    let socket = io('/', {
+      transportOptions: {
+        polling: {
+          extraHeaders: {
+            'user_id': this.state.user.id,
+            'user_role': this.state.user.role
+          }
+        }
+      }
+    });
   }
 
   getTickets() {
@@ -102,7 +120,7 @@ class App extends React.Component {
     }
     return (
       <div>
-        <Nav user={this.state.user}/>
+        <Nav waitTime={this.state.waitTime} user={this.state.user}/>
         <div className="col-md-8">
           {render}
           <TicketList user={this.state.user} ticketList={this.state.ticketList} updateTickets={this.updateTickets.bind(this)} />

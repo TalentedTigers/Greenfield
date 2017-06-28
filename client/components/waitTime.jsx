@@ -22,9 +22,6 @@ class WaitTime extends React.Component {
     this.socket.emit('connected', {});
   }
 
-  componentDidMount() {
-  }
-
   render() {
     return (
       <div id="wait_time" className="col-md-4">

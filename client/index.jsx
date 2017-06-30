@@ -5,6 +5,7 @@ import TicketList from './components/ticketList.jsx';
 import TicketSubmission from './components/ticketSubmission.jsx';
 import Login from './components/login.jsx';
 import Nav from './components/nav.jsx';
+import Header from './components/header.jsx';
 import AdminDashboard from './components/adminDashboard.jsx';
 import _ from 'underscore';
 
@@ -57,26 +58,35 @@ class App extends React.Component {
   }
 
   submitTickets(e) {
-    e.preventDefault();
-    let ticket = {
-      userId: this.state.user.id,
-      description: document.getElementById('ticket_submission_description').value,
-      category: document.getElementById('ticket_submission_category').value,
-      location: document.getElementById('ticket_submission_location').value,
-      status: 'Opened'
-    };
-
-    $.ajax({
-      url: '/api/tickets',
-      type: 'POST',
-      data: ticket,
-      success: (response) => {
-        this.socket.emit('refresh');
-        document.getElementById('ticket_submission_description').value = '';
+    $('.ticket_submission_form').validate({
+      rules: {
+        category: 'required',
+        location: 'required',
+        description: 'required'
       },
-      error: () => {
-        console.log('Error submitting ticket');
-      }
+      submitHandler: (form) => {
+        let ticket = {
+          userId: this.state.user.id,
+          category: document.getElementById('ticket_submission_category').value,
+          location: document.getElementById('ticket_submission_location').value,
+          description: document.getElementById('ticket_submission_description').value,
+          status: 'Opened'
+        };
+        $.ajax({
+          url: '/api/tickets',
+          type: 'POST',
+          data: ticket,
+          success: (response) => {
+            this.socket.emit('refresh');
+            document.getElementById('ticket_submission_location').value = '';
+            document.getElementById('ticket_submission_description').value = '';
+          },
+          error: () => {
+            console.log('Error submitting ticket');
+          }
+        });
+      },
+      errorPlacement: function(error, element) {} // Do not show error messages
     });
   }
 
@@ -131,21 +141,28 @@ class App extends React.Component {
 
   render() {
     let user = this.state.user;
-    let render = null;
+    let nav = null;
+    let header = null;
+    let main = null;
+    if (user) {
+      nav = <Nav statistic={this.state.statistic} user={this.state.user} />;
+      header = <Header statistic={this.state.statistic} user={this.state.user} />;
+    }
     if (!user) {
-      render = <Login />;
+      main = <Login />;
     } else if (user.role === 'student') {
-      render = <TicketSubmission submitTickets={this.submitTickets.bind(this)} ticketCategoryList={this.state.ticketCategoryList}/>;
+      main = <TicketSubmission submitTickets={this.submitTickets.bind(this)} ticketCategoryList={this.state.ticketCategoryList}/>;
     } else if (user.role === 'mentor') {
       // render HIR view
     } else if (user.role === 'admin') {
-      render = <AdminDashboard filterTickets={this.filterTickets.bind(this)} statistic={this.state.statistic} ticketCategoryList={this.state.ticketCategoryList}/>;
+      main = <AdminDashboard filterTickets={this.filterTickets.bind(this)} statistic={this.state.statistic} ticketCategoryList={this.state.ticketCategoryList}/>;
     }
     return (
       <div>
-        <Nav statistic={this.state.statistic} user={this.state.user}/>
-        <div className="col-md-8">
-          {render}
+        {nav}
+        {header}
+        <div className="container">
+          {main}
           <TicketList user={this.state.user} ticketList={this.state.ticketList} updateTickets={this.updateTickets.bind(this)} hasClaimed={this.state.hasClaimed} />
         </div>
       </div>

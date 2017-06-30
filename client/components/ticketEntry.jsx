@@ -24,7 +24,7 @@ const TicketEntry = ({user, ticket, updateTickets, hasClaimed}) => {
     claimButton = <button onClick={() => updateTickets({ id: ticket.id, status: 'Claimed' })} type="button" className="btn btn-xs btn-primary" disabled={hasClaimed}>Claim</button>;
   }
 
-  if (ticket.status !== 'Closed' && (ticket.claimedBy === user.id || ticket.userId === user.id)) {
+  if (ticket.status !== 'Closed' && (ticket.claimedBy === user.id || ticket.userId === user.id || user.role === 'admin')) {
     closeButton = <button onClick={() => updateTickets({ id: ticket.id, status: 'Closed' })} type="button" className="btn btn-xs btn-danger">Close</button>;
   }
 

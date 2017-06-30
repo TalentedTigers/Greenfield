@@ -15,7 +15,7 @@ const TicketSubmission = ({submitTickets, ticketCategoryList}) => (
       </div>
       <div className="col-xs-4">
         <label htmlFor="ticket_submission_location">Location</label>
-        <input type="text" id="ticket_submission_location" className="form-control" placeholder="Your station number"/>
+        <input type="text" id="ticket_submission_location" className="form-control" placeholder="Your station number" required />
       </div>
     </div>
     <div className="row">

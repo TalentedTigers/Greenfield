@@ -1,8 +1,8 @@
-const db = require('./index');
+const { db, Ticket, User } = require('./index');
 const _ = require('underscore');
 
 const createTicket = (req, res) => {
-  db.Ticket.create(req.body)
+  Ticket.create(req.body)
     .then(result => {
       if (!result) { throw result; }
       res.sendStatus(201);
@@ -25,12 +25,27 @@ const findTickets = (req, res) => {
   } else if (query.role === 'admin') {
     option = _.omit(query, ['id', 'role']);
   }
-  
-  db.Ticket.findAll({
+
+  const otherfunction = function(status) {
+    console.log('test', status);
+    return status;
+  };
+
+  Ticket.findAll({
     where: option,
-    include: [ { model: db.User } ]
+    include: [ { model: User } ],
+    order: [
+      [db.literal(`CASE
+        WHEN status = 'Claimed' THEN 1
+        WHEN status = 'Opened' THEN 2
+        WHEN status = 'Closed' THEN 3
+        END`
+      )],
+      ['updatedAt', 'DESC']
+    ]
   })
     .then(result => {
+      console.log(result);
       if (!result) { throw result; }
       res.send(result);
     })
@@ -44,7 +59,7 @@ const updateTickets = (req, res) => {
   if (req.body.status === 'Closed') {
     req.body.closedAt = new Date();
   }
-  db.Ticket.update(req.body, { where: { id: req.params.id } })
+  Ticket.update(req.body, { where: { id: req.params.id } })
     .then(ticket => {
       res.sendStatus(200);
     })
@@ -55,7 +70,7 @@ const updateTickets = (req, res) => {
 
 const createUser = (req, res) => {
   console.log(req.body);
-  db.User.create(req.body)
+  User.create(req.body)
     .then(result => {
       console.log('RESULT: ', result);
       if (!result) { throw result; }

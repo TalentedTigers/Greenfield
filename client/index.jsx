@@ -14,7 +14,8 @@ class App extends React.Component {
       ticketList: [],
       ticketCategoryList: ['React', 'Socket.IO', 'Recursion', 'Postgres'],
       user: null,
-      statistic: {}
+      statistic: {},
+      hasClaimed: false
     };
   }
  
@@ -25,6 +26,8 @@ class App extends React.Component {
       async: false,
       success: (response) => {
         return response ? this.setState({ user: response.user }) : null;
+        this.hasClaimed();
+        console.log(this.state.hasClaimed);
       },
       error: () => {
         console.log('failed');
@@ -63,6 +66,7 @@ class App extends React.Component {
       success: (tickets) => {
         console.log('Receieved: ', tickets);
         this.setState({ ticketList: tickets });
+        this.hasClaimed();
       },
       error: () => {
         console.log('failed to get all tickets');
@@ -143,6 +147,16 @@ class App extends React.Component {
     this.getTickets(option);
   }
 
+  hasClaimed() {
+    const ticketList = this.state.ticketList;
+    for (let i = 0; i < ticketList.length; i++) {
+      if (ticketList[i].claimedBy === this.state.user.id) {
+        return this.setState({ hasClaimed: true });
+      }
+    }
+    this.setState({ hasClaimed: false });
+  }
+
   render() {
     let user = this.state.user;
     let render = null;
@@ -160,7 +174,7 @@ class App extends React.Component {
         <Nav statistic={this.state.statistic} user={this.state.user}/>
         <div className="col-md-8">
           {render}
-          <TicketList user={this.state.user} ticketList={this.state.ticketList} updateTickets={this.updateTickets.bind(this)} />
+          <TicketList user={this.state.user} ticketList={this.state.ticketList} updateTickets={this.updateTickets.bind(this)} hasClaimed={this.state.hasClaimed} />
         </div>
       </div>
     );

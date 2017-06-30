@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import util from '../helpers/util';
 
-const TicketEntry = ({user, ticket, updateTickets}) => {
+const TicketEntry = ({user, ticket, updateTickets, hasClaimed}) => {
 
   let claimButton = null;
   let closeButton = null;
@@ -21,7 +21,7 @@ const TicketEntry = ({user, ticket, updateTickets}) => {
   }
 
   if (ticket.status === 'Opened' && ticket.userId !== user.id) {
-    claimButton = <button onClick={() => updateTickets({ id: ticket.id, status: 'Claimed' })} type="button" className="btn btn-xs btn-primary">Claim</button>;
+    claimButton = <button onClick={() => updateTickets({ id: ticket.id, status: 'Claimed' })} type="button" className="btn btn-xs btn-primary" disabled={hasClaimed}>Claim</button>;
   }
 
   if (ticket.status !== 'Closed' && (ticket.claimedBy === user.id || ticket.userId === user.id)) {

@@ -3,6 +3,9 @@ const sampleData = require('./sampleData');
 
 db.sync({ force: true })
   .then(() => {
-    User.bulkCreate(sampleData.users);
-    Ticket.bulkCreate(sampleData.tickets);
+    User.bulkCreate(sampleData.users).then(() => {
+      Ticket.bulkCreate(sampleData.tickets).then(() => {
+        db.close();
+      });
+    });
   });

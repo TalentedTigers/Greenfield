@@ -236,6 +236,13 @@ module.exports.users = [
     "username": "felice_tewes",
     "role": "student",
     "cohort": "HRSF-78"
+  },
+  {
+    "firstName": "Evian",
+    "lastName": "Kwan",
+    "username": "eviankwan",
+    "role": "mentor",
+    "cohort": "HRSF-77"
   }
 ];
 

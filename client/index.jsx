@@ -17,8 +17,9 @@ class App extends React.Component {
       statistic: {},
       hasClaimed: false
     };
+    this.socket = {};
   }
- 
+
   componentWillMount() {
     $.ajax({
       url: '/api/users/:id',
@@ -33,42 +34,22 @@ class App extends React.Component {
     });
   }
 
-  componentDidMount () {
-    if (this.state.user) {
-      this.getTickets({
-        id: this.state.user.id,
-        role: this.state.user.role
-      });
-      this.broadcastMsg();
-    }
-  }
-
-  broadcastMsg() {
-    let socket = io({
-      query: {
-        id: this.state.user.id,
-        role: this.state.user.role
-      }
+  componentDidMount() {
+    if (!this.state.user) { return; }
+    let option = {
+      id: this.state.user.id,
+      role: this.state.user.role
+    };
+    this.socket = io({ query: option });
+    this.socket.on('update or submit ticket', () => {
+      return option.role === 'admin' ? this.filterTickets() : this.getTickets(option);
     });
-    socket.on('statistic', data => {
-      console.log('socket: ', data);
-      this.setState({ statistic: data });
-    });
+    this.getTickets(option);
   }
 
   getTickets(option) {
-    $.ajax({
-      url: '/api/tickets',
-      type: 'GET',
-      data: option,
-      success: (tickets) => {
-        console.log('Receieved: ', tickets);
-        this.setState({ ticketList: tickets });
-        this.hasClaimed();
-      },
-      error: () => {
-        console.log('failed to get all tickets');
-      }
+    $.get('/api/tickets', option, (tickets) => {
+      this.setState({ ticketList: tickets });
     });
   }
 
@@ -90,10 +71,7 @@ class App extends React.Component {
       data: ticket,
       success: (response) => {
         console.log(`Successfully sent ${ticket} to apt/tickets via POST`);
-        this.getTickets({
-          id: this.state.user.id,
-          role: this.state.user.role
-        });
+        this.socket.emit('refresh');
         document.getElementById('ticket_submission_description').value = '';
       },
       error: () => {
@@ -106,16 +84,13 @@ class App extends React.Component {
     if (data.status === 'Claimed') {
       data.claimedBy = this.state.user.id;
     }
-    
+
     $.ajax({
       url: `/api/tickets/${data.id}`,
       type: 'PUT',
       data: data,
       success: (response) => {
-        this.getTickets({
-          id: this.state.user.id,
-          role: this.state.user.role
-        });
+        this.socket.emit('refresh');
       },
       error: (err) => {
         console.log('failed to update ticket');
@@ -124,7 +99,7 @@ class App extends React.Component {
   }
 
   filterTickets(e) {
-    e.preventDefault();
+    if (e) { e.preventDefault(); }
     let timeWindow = document.getElementById('time-window').value;
     let category = document.getElementById('select-category').value;
     let status = document.getElementById('ticket-status').value;
@@ -145,15 +120,15 @@ class App extends React.Component {
     this.getTickets(option);
   }
 
-  hasClaimed() {
-    const ticketList = this.state.ticketList;
-    for (let i = 0; i < ticketList.length; i++) {
-      if (ticketList[i].claimedBy === this.state.user.id) {
-        return this.setState({ hasClaimed: true });
-      }
-    }
-    this.setState({ hasClaimed: false });
-  }
+  // hasClaimed() {
+  //   const ticketList = this.state.ticketList;
+  //   for (let i = 0; i < ticketList.length; i++) {
+  //     if (ticketList[i].claimedBy === this.state.user.id) {
+  //       return this.setState({ hasClaimed: true });
+  //     }
+  //   }
+  //   this.setState({ hasClaimed: false });
+  // }
 
   render() {
     let user = this.state.user;

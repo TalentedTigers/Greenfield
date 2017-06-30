@@ -1,41 +1,36 @@
-const db = require ('../../database/');
+const db = require ('../../database/controller');
 const util = require('../helpers/util');
 
 module.exports = server => {
   const io = require('socket.io')(server, { cookie: true });
+  const students = {};
+  const mentors = {};
+  const admins = {};
 
-  let students = {};
-  let mentors = {};
-
-  io.sockets.on('connection', socket => {
+  io.on('connection', socket => {
     let id = socket.handshake.query.id;
     let role = socket.handshake.query.role;
+
     if (role === 'student') {
       !students[id] ? students[id] = [socket] : students[id].push(socket);
     } else if (role === 'mentor') {
       !mentors[id] ? mentors[id] = [socket] : mentors[id].push(socket);
+    } else if (role === 'admin') {
+      !admins[id] ? admins[id] = [socket] : admins[id].push(socket);
     }
 
-    db.Ticket.findAll({
-      where: {
-        status: 'Closed',
-        claimedAt: { $not: null }
-      }
-    }).then(tickets => {
-      socket.emit('statistic', {
-        studentNum: Object.keys(students).length,
-        mentorNum: Object.keys(mentors).length,
-        currAveWait: util.computeAvgWaitTime(tickets)
-      });
-      console.log(`${Object.keys(students).length} connected`);
-      console.log(`${Object.keys(mentors).length} connected`);
-    });
+    console.log(`${Object.keys(students).length} connected`);
+    console.log(`${Object.keys(mentors).length} connected`);
 
-    socket.on('disconnect', data => {
+    socket.on('refresh', () => io.emit('update or submit ticket'));
+
+    socket.on('disconnect', socket => {
       if (role === 'student') {
         students[id].length <= 1 ? delete students[id] : students[id].splice(students[id].indexOf(socket), 1);
       } else if (role === 'mentor') {
         mentors[id].length <= 1 ? delete mentors[id] : mentors[id].splice(mentors[id].indexOf(socket), 1);
+      } else if (role === 'admin') {
+        admins[id].length <= 1 ? delete admins[id] : admins[id].splice(admins[id].indexOf(socket), 1);
       }
       console.log(`Disconnected, now ${Object.keys(students).length} connected`);
       console.log(`Disconnected, now ${Object.keys(mentors).length} connected`);

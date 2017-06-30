@@ -1,20 +1,12 @@
 const { db, Ticket, User } = require('./index');
 const _ = require('underscore');
 
-const createTicket = (req, res) => {
-  Ticket.create(req.body)
-    .then(result => {
-      if (!result) { throw result; }
-      res.sendStatus(201);
-    })
-    .catch(() => {
-      res.sendStatus(500);
-    });
+const createTicket = (ticket) => {
+  return Ticket.create(ticket);
 };
 
-const findTickets = (req, res) => {
+const findTickets = (query) => {
   let option = {};
-  let query = req.query;
   if (query.role === 'student') {
     option = { userId: query.id };
   } else if (query.role === 'mentor') {
@@ -31,7 +23,7 @@ const findTickets = (req, res) => {
     return status;
   };
 
-  Ticket.findAll({
+  return Ticket.findAll({
     where: option,
     include: [ { model: User } ],
     order: [
@@ -43,40 +35,21 @@ const findTickets = (req, res) => {
       )],
       ['updatedAt', 'DESC']
     ]
-  })
-    .then(result => {
-      console.log(result);
-      if (!result) { throw result; }
-      res.send(result);
-    })
-    .catch(() => { res.sendStatus(404); });
+  });
 };
 
-const updateTickets = (req, res) => {
-  if (req.body.status === 'Claimed') {
-    req.body.claimedAt = new Date();
+const updateTickets = (body, id) => {
+  if (body.status === 'Claimed') {
+    body.claimedAt = new Date();
   }
-  if (req.body.status === 'Closed') {
-    req.body.closedAt = new Date();
+  if (body.status === 'Closed') {
+    body.closedAt = new Date();
   }
-  Ticket.update(req.body, { where: { id: req.params.id } })
-    .then(ticket => {
-      res.sendStatus(200);
-    })
-    .catch(err => {
-      res.sendStatus(500);
-    });
+  return Ticket.update(body, { where: { id: id } });
 };
 
-const createUser = (req, res) => {
-  console.log(req.body);
-  User.create(req.body)
-    .then(result => {
-      console.log('RESULT: ', result);
-      if (!result) { throw result; }
-      res.sendStatus(201);
-    })
-    .catch(() => { res.sendStatus(500); });
+const createUser = (user) => {
+  return User.create(user);
 };
 
 module.exports = {

@@ -1,16 +1,22 @@
-const {db, Ticket, User} = require ('../../database/');
-const util = require('../../helpers/util');
+'use strict';
 
-module.exports = server => {
-  const io = require('socket.io')(server, { cookie: true });
+var _require = require('../../database/'),
+    db = _require.db,
+    Ticket = _require.Ticket,
+    User = _require.User;
 
-  const students = {};
-  const mentors = {};
-  const admins = {};
+var util = require('../../helpers/util');
 
-  io.on('connection', socket => {
-    let id = socket.handshake.query.id;
-    let role = socket.handshake.query.role;
+module.exports = function (server) {
+  var io = require('socket.io')(server, { cookie: true });
+
+  var students = {};
+  var mentors = {};
+  var admins = {};
+
+  io.on('connection', function (socket) {
+    var id = socket.handshake.query.id;
+    var role = socket.handshake.query.role;
 
     if (role === 'student') {
       !students[id] ? students[id] = [socket] : students[id].push(socket);
@@ -24,44 +30,39 @@ module.exports = server => {
 
     io.emit('user connect', util.connectionCount(students, mentors, admins));
 
-    console.log(`${Object.keys(students).length} students connected`);
-    console.log(`${Object.keys(mentors).length} mentors connected`);
-    console.log(`${Object.keys(admins).length} admins connected`);
+    console.log(Object.keys(students).length + ' students connected');
+    console.log(Object.keys(mentors).length + ' mentors connected');
+    console.log(Object.keys(admins).length + ' admins connected');
 
-    socket.on('refresh', () => io.emit('update or submit ticket'));
+    socket.on('refresh', function () {
+      return io.emit('update or submit ticket');
+    });
 
-    socket.on('get wait time', () => {
-      Ticket.findAll({
-        where: {
-          status: 'Closed',
-          claimedAt: { $not: null },
-          createdAt: { $gt: new Date(new Date() - 24 * 60 * 60 * 1000) }
-        }
-      }).then(tickets => {
-        let response = { waitTime: util.computeAvgWaitTime(tickets) };
-        io.emit('new wait time', response);
+    socket.on('get wait time', function () {
+      Ticket.findAll().then(function (tickets) {
+        var response = { waitTime: util.computeAvgWaitTime(tickets, mentors, id) };
+        console.log('this is the response est wait time!: ', response);
+        socket.emit('new wait time', response);
       });
     });
 
-    socket.on('update adminStats', () => {
-      let openedTickets = closedTickets = 0;
-      Ticket.count({ where: { status: 'Opened' } })
-        .then(numOpenTickets => {
-          openedTickets = numOpenTickets;
-          return Ticket.count({
-            where: {
-              status: 'Closed',
-              closedAt: { $gt: new Date(new Date() - 24 * 60 * 60 * 1000) }
-            }
-          });
-        })
-        .then(numCloseTickets => {
-          closedTickets = numCloseTickets;
-          io.emit('new adminStats', {
-            open: openedTickets,
-            closed: closedTickets
-          });
+    socket.on('update adminStats', function () {
+      var openedTickets, closedTickets = 0;
+      Ticket.count({ where: { status: 'Opened' } }).then(function (numOpenTickets) {
+        openedTickets = numOpenTickets;
+        return Ticket.count({
+          where: {
+            status: 'Closed',
+            closedAt: { $gt: new Date(new Date() - 24 * 60 * 60 * 1000) }
+          }
         });
+      }).then(function (numCloseTickets) {
+        closedTickets = numCloseTickets;
+        io.emit('new adminStats', {
+          open: openedTickets,
+          closed: closedTickets
+        });
+      });
     });
 
     // logic has flaws
@@ -72,7 +73,7 @@ module.exports = server => {
     //     });
     // });
 
-    socket.on('disconnect', socket => {
+    socket.on('disconnect', function (socket) {
       if (role === 'student') {
         students[id].length <= 1 ? delete students[id] : students[id].splice(students[id].indexOf(socket), 1);
       } else if (role === 'mentor') {
@@ -83,9 +84,9 @@ module.exports = server => {
 
       io.emit('user disconnect', util.connectionCount(students, mentors, admins));
 
-      console.log(`Disconnected, now ${Object.keys(students).length} students connected`);
-      console.log(`Disconnected, now ${Object.keys(mentors).length} mentors connected`);
-      console.log(`Disconnected, now ${Object.keys(admins).length} admins connected`);
+      console.log('Disconnected, now ' + Object.keys(students).length + ' students connected');
+      console.log('Disconnected, now ' + Object.keys(mentors).length + ' mentors connected');
+      console.log('Disconnected, now ' + Object.keys(admins).length + ' admins connected');
     });
   });
 };

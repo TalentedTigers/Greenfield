@@ -16,8 +16,8 @@ module.exports.users = [
   {
     "firstName": "Jacob",
     "lastName": "Penney",
-    "username": "jacobpenney",
-    "role": "admin",
+    "username": "OneCent01",
+    "role": "student",
     "cohort": null
   },
   {

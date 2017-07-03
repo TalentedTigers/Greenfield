@@ -164,6 +164,16 @@ h6:last-child {
 .ticket_list_entry {
   color: #333;
   line-height: 22px;
+
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 0%;
+  }
 }
 
 .ticket_list_entry_meta {

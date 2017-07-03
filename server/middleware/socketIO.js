@@ -29,14 +29,10 @@ module.exports = server => {
     socket.on('refresh', () => io.emit('update or submit ticket'));
 
     socket.on('get wait time', () => {
-      Ticket.findAll({
-        where: {
-          $or: [{ status: 'Closed' }, { status: 'Claimed' }],
-          claimedAt: { $gt: new Date(new Date() - 24 * 60 * 60 * 1000) }
-        }
-      }).then(ticketsFromToday => {
-        let avgWait = util.computeAvgWaitTime(ticketsFromToday);
-        io.emit('new wait time', { waitTime: avgWait });
+      Ticket.findAll().then(tickets => {
+        let response = { waitTime: util.computeAvgWaitTime(tickets, mentors, id) };
+        console.log('this is the response est wait time!: ', response);
+        socket.emit('new wait time', response);
       });
     });
 

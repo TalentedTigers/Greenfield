@@ -39,12 +39,14 @@ class Chat extends React.Component {
 
   render() {
     return (
-      <div>
-        <ul id="chat">
+      <div className="chat">
+        <div className="chatMessages">
         {this.state.messages.map((tuple, index) =>
-          (<li className="chatEntry" key={index}>{`${tuple[0]} : ${tuple[1]}`}</li>))}
-        </ul>
-        <input className="chatInput" type="text" onChange={this.handleKeys} onKeyUp={this.handleKeys} autoComplete="off" value={this.state.currentMessage}/><button className="btn btn-xs btn-default" onClick={this.txChat}>Send</button>
+          (<div className="chatEntry" key={index}>{`${tuple[0]} : ${tuple[1]}`}</div>))}
+        </div>
+        <span className="chatBar">
+          <input className="chatInput" type="text" onChange={this.handleKeys} onKeyUp={this.handleKeys} autoComplete="off" value={this.state.currentMessage}/><button className="sendButton" onClick={this.txChat}>Send</button>
+        </span>
       </div>
     );
   }

@@ -72,9 +72,14 @@ class WhiteBoard extends React.Component {
   render() {
     return (
       <canvas 
+        className="whiteboard"
       	onMouseMove={this.handleMouseMove.bind(this)}
       	onMouseUp={this.handleMouseUp.bind(this)}
-      	onMouseDown={this.handleMouseDown.bind(this)} ref="canvas" width={window.innerWidth} height={window.innerHeight}/>
+        onMouseDown={this.handleMouseDown.bind(this)}
+        ref="canvas"
+        width={window.innerWidth}
+        height={window.innerHeight}
+      />
     );
   }
 }

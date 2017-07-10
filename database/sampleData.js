@@ -14,18 +14,18 @@ module.exports.users = [
     "cohort": "HRSF-78"
   },
   {
-    "firstName": "Bonkula",
-    "lastName": "Bonkula",
+    "firstName": "Beth",
+    "lastName": "Johnson",
     "username": "bonkula",
     "role": "mentor",
     "cohort": "HRSF-78"
   },
   {
     "firstName": "Poet",
-    "lastName": "IsAwesome",
+    "lastName": "Laureate",
     "username": "poetisawesome",
     "role": "student",
-    "cohort": null
+    "cohort": "HRSF-77"
   },
   {
     "firstName": "Kenneth",

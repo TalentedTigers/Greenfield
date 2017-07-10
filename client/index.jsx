@@ -30,7 +30,7 @@ class App extends React.Component {
       ticket: null,
       ticketClaimed: false,
       sessionPartner: { firstName: 'anonymous' },
-      sessionIsActive: null,
+      sessionIsActive: false
     };
   }
 
@@ -348,26 +348,32 @@ class App extends React.Component {
       list = ticketList;
     } else if (isAuthenticated && user.role === 'student' && this.state.sessionIsActive) {
       main = interactiveSession;
+      header = null;
       list = null;
     } else if (isAuthenticated && user.role === 'mentor' && !this.state.sessionIsActive) {
       list = ticketList;
     } else if (isAuthenticated && user.role === 'mentor' && this.state.sessionIsActive) {
       main = interactiveSession;
+      header = null;
+      list = null;
     } else if (isAuthenticated && user.role === 'admin') {
       main = adminDashboard;
       list = ticketList;
     } 
 
+    let body = (!this.state.sessionIsActive) ?
+     (<div className="container">
+          {feedback}
+          {main}
+          {list}
+      </div>) : interactiveSession;
+    
     return (
       <div>
         <Alert />
         {nav}
         {header}
-        <div className="container">
-          {feedback}
-          {main}
-          {list}
-        </div>
+        {body}
       </div>
     );
   }

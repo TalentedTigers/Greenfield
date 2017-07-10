@@ -222,41 +222,78 @@ h6:last-child {
   clear: both;
 }
 
-.isession_button {
-  float: right;
+.interactive {
+  display: flex;
+  flex-flow: column;
+  height: 100vh - 40px;
+  width: 100vw;
+  margin: 0px;
+  outline: 1px solid grey;
 }
 
-#chat {
-  list-style-type: none;
+.isession_button {
+  flex: 0 1 auto;
+}
+
+.iElementContainer {
+  display: flex;
+  flex-flow: row;
+  outline: 1px solid grey;
+}
+
+.leftGroup {
+  display: flex;
+  flex-flow: column;
+  flex-grow: 1;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.whiteboard {
+  display: flex;
+  outline: 1px solid grey;
+  height: 85vh;
+  flex-grow: 3;
+  flex-shrink: 1;
+}
+
+.chat {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  outline: 1px solid grey;
+}
+
+.chatMessages {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  flex-shrink: 1;
   margin: 0;
   padding: 0;
-  width: 100%;
-  margin-right: .5%;
-  box-sizing: border-box;
+}
+
+.chatBar {
+  position: relative;
+  flex-flow: row;
+  margin-top: auto;
 }
 
 .chatInput {
+  flex-grow: 1;
   margin: 0;
   padding: 0;
-  width: 94%;
-  margin-right: .5%;
-  box-sizing: border-box;
+  overflow: hidden;
+  height: 25px;
 }
 
-.chatButton {
-  width: 5%;
-  margin: 2px;
-  box-sizing: border-box;
-}
-
-#chat li:nth-child(odd) {
-  background: #eee;
+.sendButton {
+  margin: 0x;
+  margin-top: auto;
+  height: 25px;
 }
 
 .chatEntry {
   padding: 5px 10px;
-  width: 100%;
-  margin-right: .5%;
 }
 
 .alert {

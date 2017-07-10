@@ -13,8 +13,16 @@ const createTicket = (req, res) => {
 const findTickets = (req, res) => {
   let option = {};
   let query = req.query;
+  let claimedOrder = 1;
+  let openedOrder = 2;
+  let closedOrder = 3;
+  
   if (query.role === 'student') {
-    option = { userId: query.id };
+    openedOrder = 1;
+    claimedOrder = 2;
+    option = {
+      status: ['Opened', 'Claimed']
+    };
   } else if (query.role === 'mentor') {
     option = {
       status: ['Opened', 'Claimed'],
@@ -24,19 +32,14 @@ const findTickets = (req, res) => {
     option = _.omit(query, ['id', 'role']);
   }
 
-  const otherfunction = function(status) {
-    console.log('test', status);
-    return status;
-  };
-
   Ticket.findAll({
     where: option,
     include: [ { model: User, as: 'user' }, { model: User, as: 'userClaimed' } ],
     order: [
       [db.literal(`CASE
-        WHEN status = 'Claimed' THEN 1
-        WHEN status = 'Opened' THEN 2
-        WHEN status = 'Closed' THEN 3
+        WHEN status = 'Claimed' THEN ${claimedOrder}
+        WHEN status = 'Opened' THEN ${openedOrder}
+        WHEN status = 'Closed' THEN ${closedOrder}
         END`
       )],
       ['updatedAt', 'DESC']

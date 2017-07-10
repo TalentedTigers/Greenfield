@@ -1,64 +1,71 @@
 module.exports.users = [
   {
-    "firstName":"Eric",
-    "lastName":"Mai",
-    "username":"enmai1988",
+    "firstName":"Azmeer",
+    "lastName":"Azmeer",
+    "username":"azmeer",
     "role":"admin",
     "cohort":"HRSF-77"
   },
   {
-    "firstName": "David",
-    "lastName": "Vassett",
-    "username": "DavidVassett",
+    "firstName": "Mentor",
+    "lastName": "Man",
+    "username": "hackmentor",
     "role": "mentor",
     "cohort": "HRSF-78"
   },
   {
-    "firstName": "Jacob",
-    "lastName": "Penney",
-    "username": "OneCent01",
-    "role": "student",
-    "cohort": null
+    "firstName": "Beth",
+    "lastName": "Johnson",
+    "username": "bonkula",
+    "role": "mentor",
+    "cohort": "HRSF-78"
   },
   {
-    "firstName": "David",
-    "lastName": "Gould",
-    "username": "david.gould112",
+    "firstName": "Poet",
+    "lastName": "Laureate",
+    "username": "poetisawesome",
     "role": "student",
     "cohort": "HRSF-77"
   },
   {
-    "firstName": "Jeffrey",
-    "lastName": "Filippello",
-    "username": "jeffrey_filippello",
+    "firstName": "Kenneth",
+    "lastName": "So",
+    "username": "ethnographers",
+    "role": "mentor",
+    "cohort": "HRSF-77"
+  },
+  {
+    "firstName": "Sheyda",
+    "lastName": "Rezaee",
+    "username": "sheydarezaee",
     "role": "student",
     "cohort": "HRSF-78"
   },
   {
-    "firstName": "Helenelizabeth",
-    "lastName": "Bedson",
-    "username": "helenelizabeth_bedson",
+    "firstName": "Wesley",
+    "lastName": "Choi",
+    "username": "weschoi",
     "role": "student",
     "cohort": "HRSF-78"
   },
   {
     "firstName": "Melisenda",
     "lastName": "Kloisner",
-    "username": "melisenda_kloisner",
-    "role": "student",
+    "username": "glasscamptesting",
+    "role": "admin",
     "cohort": "HRSF-77"
   },
   {
     "firstName": "Kaylee",
     "lastName": "Gurden",
-    "username": "kaylee_gurden",
-    "role": "student",
+    "username": "campreactor",
+    "role": "mentor",
     "cohort": "HRSF-78"
   },
   {
-    "firstName": "Nessi",
-    "lastName": "Milson",
-    "username": "nessi_milson",
+    "firstName": "Bonk",
+    "lastName": "El",
+    "username": "elbonk",
     "role": "student",
     "cohort": "HRSF-78"
   },
@@ -250,6 +257,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-09 00:22:51",
     "updatedAt": "2017-05-09 00:22:51",
     "status": "Closed",
+    "private": false,
     "userId": 14
   },
   {
@@ -261,7 +269,7 @@ module.exports.tickets = [
     "claimedAt": "2017-05-25 12:39:25",
     "closedAt": "2017-05-25 13:01:25",
     "updatedAt": "2017-05-25 13:01:25",
-    "status": "Closed",
+    "private": false,
     "userId": 28
   },
   {
@@ -274,6 +282,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-22 12:06:19",
     "updatedAt": "2017-06-22 12:06:19",
     "status": "Closed",
+    "private": false,
     "userId": 16
   },
   {
@@ -286,7 +295,8 @@ module.exports.tickets = [
     "closedAt": "2017-06-10 12:46:10",
     "updatedAt": "2017-06-10 12:46:10",
     "status": "Closed",
-    "userId": 20
+    "private": false,
+    "userId": 19
   },
   {
     "category": "Recursion",
@@ -298,7 +308,20 @@ module.exports.tickets = [
     "closedAt": "2017-06-10 14:00:38",
     "updatedAt": "2017-06-10 14:00:38",
     "status": "Closed",
+    "private": false,
     "userId": 15
+  },
+  {
+    "category": "Angular",
+    "description": "I am having an issue with Angular. Can I please have some help figuring out the issue I am having with Angular.",
+    "location": "HR8-04",
+    "claimedBy": 6,
+    "createdAt": "2017-06-23 19:46:49",
+    "claimedAt": "2017-06-23 19:51:49",
+    "closedAt": "2017-06-23 20:05:49",
+    "updatedAt": "2017-06-23 20:05:49",
+    "status": "Closed",
+    "userId": 5,
   },
   {
     "category": "MongoDB",
@@ -310,7 +333,8 @@ module.exports.tickets = [
     "closedAt": "2017-05-23 17:26:44",
     "updatedAt": "2017-05-23 17:26:44",
     "status": "Closed",
-    "userId": 20
+    "private": false,
+    "userId": 20,
   },
   {
     "category": "Angular",
@@ -322,6 +346,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-23 05:22:44",
     "updatedAt": "2017-05-23 05:22:44",
     "status": "Closed",
+    "private": false,
     "userId": 19
   },
   {
@@ -334,6 +359,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-02 07:28:29",
     "updatedAt": "2017-05-02 07:28:29",
     "status": "Closed",
+    "private": false,
     "userId": 24
   },
   {
@@ -345,7 +371,7 @@ module.exports.tickets = [
     "claimedAt": "2017-05-06 10:08:55",
     "closedAt": "2017-05-06 10:19:55",
     "updatedAt": "2017-05-06 10:19:55",
-    "status": "Closed",
+    "private": false,
     "userId": 16
   },
   {
@@ -357,7 +383,7 @@ module.exports.tickets = [
     "claimedAt": "2017-05-26 03:56:59",
     "closedAt": "2017-05-26 04:16:59",
     "updatedAt": "2017-05-26 04:16:59",
-    "status": "Closed",
+    "private": false,
     "userId": 25
   },
   {
@@ -370,6 +396,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-08 01:15:15",
     "updatedAt": "2017-06-08 01:15:15",
     "status": "Closed",
+    "private": false,
     "userId": 16
   },
   {
@@ -382,763 +409,8 @@ module.exports.tickets = [
     "closedAt": "2017-06-02 14:26:23",
     "updatedAt": "2017-06-02 14:26:23",
     "status": "Closed",
+    "private": false,
     "userId": 11
-  },
-  {
-    "category": "React",
-    "description": "I am having an issue with React. Can I please have some help figuring out the issue I am having with React.",
-    "location": "HR8-04",
-    "claimedBy": 6,
-    "createdAt": "2017-05-10 14:12:40",
-    "claimedAt": "2017-05-10 14:25:40",
-    "closedAt": "2017-05-10 14:38:40",
-    "updatedAt": "2017-05-10 14:38:40",
-    "status": "Closed",
-    "userId": 10
-  },
-  {
-    "category": "Node",
-    "description": "I am having an issue with Node. Can I please have some help figuring out the issue I am having with Node.",
-    "location": "HR8-22",
-    "claimedBy": 8,
-    "createdAt": "2017-06-17 16:13:13",
-    "claimedAt": "2017-06-17 16:27:13",
-    "closedAt": "2017-06-17 16:53:13",
-    "updatedAt": "2017-06-17 16:53:13",
-    "status": "Closed",
-    "userId": 30
-  },
-  {
-    "category": "Angular",
-    "description": "I am having an issue with Angular. Can I please have some help figuring out the issue I am having with Angular.",
-    "location": "HR8-14",
-    "claimedBy": 4,
-    "createdAt": "2017-06-18 16:29:22",
-    "claimedAt": "2017-06-18 16:40:22",
-    "closedAt": "2017-06-18 16:52:22",
-    "updatedAt": "2017-06-18 16:52:22",
-    "status": "Closed",
-    "userId": 13
-  },
-  {
-    "category": "MySQL",
-    "description": "I am having an issue with MySQL. Can I please have some help figuring out the issue I am having with MySQL.",
-    "location": "HR8-12",
-    "claimedBy": 2,
-    "createdAt": "2017-05-08 10:10:33",
-    "claimedAt": "2017-05-08 10:28:33",
-    "closedAt": "2017-05-08 10:58:33",
-    "updatedAt": "2017-05-08 10:58:33",
-    "status": "Closed",
-    "userId": 15
-  },
-  {
-    "category": "Data Structures",
-    "description": "I am having an issue with Data Structures. Can I please have some help figuring out the issue I am having with Data Structures.",
-    "location": "HR8-20",
-    "claimedBy": 18,
-    "createdAt": "2017-06-11 22:29:53",
-    "claimedAt": "2017-06-11 22:57:53",
-    "closedAt": "2017-06-11 23:13:53",
-    "updatedAt": "2017-06-11 23:13:53",
-    "status": "Closed",
-    "userId": 19
-  },
-  {
-    "category": "Node",
-    "description": "I am having an issue with Node. Can I please have some help figuring out the issue I am having with Node.",
-    "location": "HR8-12",
-    "claimedBy": 22,
-    "createdAt": "2017-06-23 12:54:01",
-    "claimedAt": "2017-06-23 13:19:01",
-    "closedAt": "2017-06-23 13:47:01",
-    "updatedAt": "2017-06-23 13:47:01",
-    "status": "Closed",
-    "userId": 26
-  },
-  {
-    "category": "Backbone",
-    "description": "I am having an issue with Backbone. Can I please have some help figuring out the issue I am having with Backbone.",
-    "location": "HR8-12",
-    "claimedBy": 13,
-    "createdAt": "2017-06-19 03:04:17",
-    "claimedAt": "2017-06-19 03:16:17",
-    "closedAt": "2017-06-19 03:26:17",
-    "updatedAt": "2017-06-19 03:26:17",
-    "status": "Closed",
-    "userId": 22
-  },
-  {
-    "category": "React",
-    "description": "I am having an issue with React. Can I please have some help figuring out the issue I am having with React.",
-    "location": "HR8-05",
-    "claimedBy": 11,
-    "createdAt": "2017-06-02 11:06:15",
-    "claimedAt": "2017-06-02 11:36:15",
-    "closedAt": "2017-06-02 11:56:15",
-    "updatedAt": "2017-06-02 11:56:15",
-    "status": "Closed",
-    "userId": 21
-  },
-  {
-    "category": "MySQL",
-    "description": "I am having an issue with MySQL. Can I please have some help figuring out the issue I am having with MySQL.",
-    "location": "HR8-18",
-    "claimedBy": 18,
-    "createdAt": "2017-05-29 14:41:47",
-    "claimedAt": "2017-05-29 15:06:47",
-    "closedAt": "2017-05-29 15:26:47",
-    "updatedAt": "2017-05-29 15:26:47",
-    "status": "Closed",
-    "userId": 7
-  },
-  {
-    "category": "React",
-    "description": "I am having an issue with React. Can I please have some help figuring out the issue I am having with React.",
-    "location": "HR8-10",
-    "claimedBy": 4,
-    "createdAt": "2017-06-03 08:46:27",
-    "claimedAt": "2017-06-03 08:50:27",
-    "closedAt": "2017-06-03 09:02:27",
-    "updatedAt": "2017-06-03 09:02:27",
-    "status": "Closed",
-    "userId": 29
-  },
-  {
-    "category": "Backbone",
-    "description": "I am having an issue with Backbone. Can I please have some help figuring out the issue I am having with Backbone.",
-    "location": "HR8-24",
-    "claimedBy": 19,
-    "createdAt": "2017-06-18 06:37:02",
-    "claimedAt": "2017-06-18 07:02:02",
-    "closedAt": "2017-06-18 07:12:02",
-    "updatedAt": "2017-06-18 07:12:02",
-    "status": "Closed",
-    "userId": 13
-  },
-  {
-    "category": "Data Structures",
-    "description": "I am having an issue with Data Structures. Can I please have some help figuring out the issue I am having with Data Structures.",
-    "location": "HR8-17",
-    "claimedBy": 10,
-    "createdAt": "2017-06-02 10:38:53",
-    "claimedAt": "2017-06-02 10:48:53",
-    "closedAt": "2017-06-02 11:09:53",
-    "updatedAt": "2017-06-02 11:09:53",
-    "status": "Closed",
-    "userId": 19
-  },
-  {
-    "category": "MongoDB",
-    "description": "I am having an issue with MongoDB. Can I please have some help figuring out the issue I am having with MongoDB.",
-    "location": "HR8-05",
-    "claimedBy": 18,
-    "createdAt": "2017-05-01 13:39:21",
-    "claimedAt": "2017-05-01 13:49:21",
-    "closedAt": "2017-05-01 14:09:21",
-    "updatedAt": "2017-05-01 14:09:21",
-    "status": "Closed",
-    "userId": 7
-  },
-  {
-    "category": "Data Structures",
-    "description": "I am having an issue with Data Structures. Can I please have some help figuring out the issue I am having with Data Structures.",
-    "location": "HR8-10",
-    "claimedBy": 7,
-    "createdAt": "2017-05-13 01:48:12",
-    "claimedAt": "2017-05-13 02:16:12",
-    "closedAt": "2017-05-13 02:31:12",
-    "updatedAt": "2017-05-13 02:31:12",
-    "status": "Closed",
-    "userId": 16
-  },
-  {
-    "category": "Express",
-    "description": "I am having an issue with Express. Can I please have some help figuring out the issue I am having with Express.",
-    "location": "HR8-13",
-    "claimedBy": 7,
-    "createdAt": "2017-05-27 08:09:11",
-    "claimedAt": "2017-05-27 08:22:11",
-    "closedAt": "2017-05-27 08:35:11",
-    "updatedAt": "2017-05-27 08:35:11",
-    "status": "Closed",
-    "userId": 23
-  },
-  {
-    "category": "React",
-    "description": "I am having an issue with React. Can I please have some help figuring out the issue I am having with React.",
-    "location": "HR8-03",
-    "claimedBy": 22,
-    "createdAt": "2017-06-03 16:15:00",
-    "claimedAt": "2017-06-03 16:41:00",
-    "closedAt": "2017-06-03 17:10:00",
-    "updatedAt": "2017-06-03 17:10:00",
-    "status": "Closed",
-    "userId": 26
-  },
-  {
-    "category": "Backbone",
-    "description": "I am having an issue with Backbone. Can I please have some help figuring out the issue I am having with Backbone.",
-    "location": "HR8-16",
-    "claimedBy": 14,
-    "createdAt": "2017-06-23 05:46:09",
-    "claimedAt": "2017-06-23 06:08:09",
-    "closedAt": "2017-06-23 06:28:09",
-    "updatedAt": "2017-06-23 06:28:09",
-    "status": "Closed",
-    "userId": 21
-  },
-  {
-    "category": "Recursion",
-    "description": "I am having an issue with Recursion. Can I please have some help figuring out the issue I am having with Recursion.",
-    "location": "HR8-01",
-    "claimedBy": 22,
-    "createdAt": "2017-06-23 19:59:32",
-    "claimedAt": "2017-06-23 20:28:32",
-    "closedAt": "2017-06-23 20:56:32",
-    "updatedAt": "2017-06-23 20:56:32",
-    "status": "Closed",
-    "userId": 24
-  },
-  {
-    "category": "Backbone",
-    "description": "I am having an issue with Backbone. Can I please have some help figuring out the issue I am having with Backbone.",
-    "location": "HR8-17",
-    "claimedBy": 5,
-    "createdAt": "2017-05-27 13:27:10",
-    "claimedAt": "2017-05-27 13:45:10",
-    "closedAt": "2017-05-27 13:57:10",
-    "updatedAt": "2017-05-27 13:57:10",
-    "status": "Closed",
-    "userId": 4
-  },
-  {
-    "category": "MySQL",
-    "description": "I am having an issue with MySQL. Can I please have some help figuring out the issue I am having with MySQL.",
-    "location": "HR8-10",
-    "claimedBy": 15,
-    "createdAt": "2017-05-24 00:06:07",
-    "claimedAt": "2017-05-24 00:31:07",
-    "closedAt": "2017-05-24 00:54:07",
-    "updatedAt": "2017-05-24 00:54:07",
-    "status": "Closed",
-    "userId": 29
-  },
-  {
-    "category": "Node",
-    "description": "I am having an issue with Node. Can I please have some help figuring out the issue I am having with Node.",
-    "location": "HR8-24",
-    "claimedBy": 10,
-    "createdAt": "2017-06-20 09:59:18",
-    "claimedAt": "2017-06-20 10:25:18",
-    "closedAt": "2017-06-20 10:37:18",
-    "updatedAt": "2017-06-20 10:37:18",
-    "status": "Closed",
-    "userId": 16
-  },
-  {
-    "category": "Angular",
-    "description": "I am having an issue with Angular. Can I please have some help figuring out the issue I am having with Angular.",
-    "location": "HR8-06",
-    "claimedBy": 22,
-    "createdAt": "2017-05-28 17:32:49",
-    "claimedAt": "2017-05-28 17:35:49",
-    "closedAt": "2017-05-28 18:03:49",
-    "updatedAt": "2017-05-28 18:03:49",
-    "status": "Closed",
-    "userId": 26
-  },
-  {
-    "category": "Data Structures",
-    "description": "I am having an issue with Data Structures. Can I please have some help figuring out the issue I am having with Data Structures.",
-    "location": "HR8-16",
-    "claimedBy": 22,
-    "createdAt": "2017-05-17 00:14:21",
-    "claimedAt": "2017-05-17 00:40:21",
-    "closedAt": "2017-05-17 00:51:21",
-    "updatedAt": "2017-05-17 00:51:21",
-    "status": "Closed",
-    "userId": 26
-  },
-  {
-    "category": "MongoDB",
-    "description": "I am having an issue with MongoDB. Can I please have some help figuring out the issue I am having with MongoDB.",
-    "location": "HR8-16",
-    "claimedBy": 4,
-    "createdAt": "2017-05-03 18:15:44",
-    "claimedAt": "2017-05-03 18:25:44",
-    "closedAt": "2017-05-03 18:46:44",
-    "updatedAt": "2017-05-03 18:46:44",
-    "status": "Closed",
-    "userId": 11
-  },
-  {
-    "category": "Data Structures",
-    "description": "I am having an issue with Data Structures. Can I please have some help figuring out the issue I am having with Data Structures.",
-    "location": "HR8-12",
-    "claimedBy": 21,
-    "createdAt": "2017-05-16 08:34:22",
-    "claimedAt": "2017-05-16 08:58:22",
-    "closedAt": "2017-05-16 09:24:22",
-    "updatedAt": "2017-05-16 09:24:22",
-    "status": "Closed",
-    "userId": 20
-  },
-  {
-    "category": "Angular",
-    "description": "I am having an issue with Angular. Can I please have some help figuring out the issue I am having with Angular.",
-    "location": "HR8-04",
-    "claimedBy": 6,
-    "createdAt": "2017-06-23 19:46:49",
-    "claimedAt": "2017-06-23 19:51:49",
-    "closedAt": "2017-06-23 20:05:49",
-    "updatedAt": "2017-06-23 20:05:49",
-    "status": "Closed",
-    "userId": 5
-  },
-  {
-    "category": "React",
-    "description": "I am having an issue with React. Can I please have some help figuring out the issue I am having with React.",
-    "location": "HR8-01",
-    "claimedBy": 15,
-    "createdAt": "2017-05-16 07:51:32",
-    "claimedAt": "2017-05-16 08:00:32",
-    "closedAt": "2017-05-16 08:27:32",
-    "updatedAt": "2017-05-16 08:27:32",
-    "status": "Closed",
-    "userId": 21
-  },
-  {
-    "category": "Express",
-    "description": "I am having an issue with Express. Can I please have some help figuring out the issue I am having with Express.",
-    "location": "HR8-06",
-    "claimedBy": 2,
-    "createdAt": "2017-06-15 19:35:00",
-    "claimedAt": "2017-06-15 19:46:00",
-    "closedAt": "2017-06-15 20:14:00",
-    "updatedAt": "2017-06-15 20:14:00",
-    "status": "Closed",
-    "userId": 15
-  },
-  {
-    "category": "Angular",
-    "description": "I am having an issue with Angular. Can I please have some help figuring out the issue I am having with Angular.",
-    "location": "HR8-02",
-    "claimedBy": 20,
-    "createdAt": "2017-05-20 19:21:03",
-    "claimedAt": "2017-05-20 19:42:03",
-    "closedAt": "2017-05-20 19:52:03",
-    "updatedAt": "2017-05-20 19:52:03",
-    "status": "Closed",
-    "userId": 4
-  },
-  {
-    "category": "MongoDB",
-    "description": "I am having an issue with MongoDB. Can I please have some help figuring out the issue I am having with MongoDB.",
-    "location": "HR8-03",
-    "claimedBy": 5,
-    "createdAt": "2017-06-22 13:28:09",
-    "claimedAt": "2017-06-22 13:52:09",
-    "closedAt": "2017-06-22 14:14:09",
-    "updatedAt": "2017-06-22 14:14:09",
-    "status": "Closed",
-    "userId": 28
-  },
-  {
-    "category": "React",
-    "description": "I am having an issue with React. Can I please have some help figuring out the issue I am having with React.",
-    "location": "HR8-05",
-    "claimedBy": 17,
-    "createdAt": "2017-05-23 10:50:55",
-    "claimedAt": "2017-05-23 11:20:55",
-    "closedAt": "2017-05-23 11:30:55",
-    "updatedAt": "2017-05-23 11:30:55",
-    "status": "Closed",
-    "userId": 15
-  },
-  {
-    "category": "React",
-    "description": "I am having an issue with React. Can I please have some help figuring out the issue I am having with React.",
-    "location": "HR8-02",
-    "claimedBy": 2,
-    "createdAt": "2017-05-17 00:19:06",
-    "claimedAt": "2017-05-17 00:40:06",
-    "closedAt": "2017-05-17 01:04:06",
-    "updatedAt": "2017-05-17 01:04:06",
-    "status": "Closed",
-    "userId": 25
-  },
-  {
-    "category": "Express",
-    "description": "I am having an issue with Express. Can I please have some help figuring out the issue I am having with Express.",
-    "location": "HR8-03",
-    "claimedBy": 17,
-    "createdAt": "2017-06-05 00:27:41",
-    "claimedAt": "2017-06-05 00:36:41",
-    "closedAt": "2017-06-05 00:52:41",
-    "updatedAt": "2017-06-05 00:52:41",
-    "status": "Closed",
-    "userId": 4
-  },
-  {
-    "category": "Node",
-    "description": "I am having an issue with Node. Can I please have some help figuring out the issue I am having with Node.",
-    "location": "HR8-14",
-    "claimedBy": 1,
-    "createdAt": "2017-06-03 10:39:26",
-    "claimedAt": "2017-06-03 10:47:26",
-    "closedAt": "2017-06-03 11:04:26",
-    "updatedAt": "2017-06-03 11:04:26",
-    "status": "Closed",
-    "userId": 26
-  },
-  {
-    "category": "React",
-    "description": "I am having an issue with React. Can I please have some help figuring out the issue I am having with React.",
-    "location": "HR8-15",
-    "claimedBy": 4,
-    "createdAt": "2017-05-31 07:32:46",
-    "claimedAt": "2017-05-31 07:50:46",
-    "closedAt": "2017-05-31 08:11:46",
-    "updatedAt": "2017-05-31 08:11:46",
-    "status": "Closed",
-    "userId": 22
-  },
-  {
-    "category": "Angular",
-    "description": "I am having an issue with Angular. Can I please have some help figuring out the issue I am having with Angular.",
-    "location": "HR8-07",
-    "claimedBy": 2,
-    "createdAt": "2017-06-20 07:13:44",
-    "claimedAt": "2017-06-20 07:17:44",
-    "closedAt": "2017-06-20 07:29:44",
-    "updatedAt": "2017-06-20 07:29:44",
-    "status": "Closed",
-    "userId": 19
-  },
-  {
-    "category": "MongoDB",
-    "description": "I am having an issue with MongoDB. Can I please have some help figuring out the issue I am having with MongoDB.",
-    "location": "HR8-11",
-    "claimedBy": 17,
-    "createdAt": "2017-06-04 00:15:25",
-    "claimedAt": "2017-06-04 00:40:25",
-    "closedAt": "2017-06-04 01:02:25",
-    "updatedAt": "2017-06-04 01:02:25",
-    "status": "Closed",
-    "userId": 23
-  },
-  {
-    "category": "Node",
-    "description": "I am having an issue with Node. Can I please have some help figuring out the issue I am having with Node.",
-    "location": "HR8-15",
-    "claimedBy": 19,
-    "createdAt": "2017-05-20 18:05:24",
-    "claimedAt": "2017-05-20 18:32:24",
-    "closedAt": "2017-05-20 18:57:24",
-    "updatedAt": "2017-05-20 18:57:24",
-    "status": "Closed",
-    "userId": 22
-  },
-  {
-    "category": "React",
-    "description": "I am having an issue with React. Can I please have some help figuring out the issue I am having with React.",
-    "location": "HR8-15",
-    "claimedBy": 13,
-    "createdAt": "2017-06-05 16:43:16",
-    "claimedAt": "2017-06-05 16:55:16",
-    "closedAt": "2017-06-05 17:24:16",
-    "updatedAt": "2017-06-05 17:24:16",
-    "status": "Closed",
-    "userId": 8
-  },
-  {
-    "category": "Recursion",
-    "description": "I am having an issue with Recursion. Can I please have some help figuring out the issue I am having with Recursion.",
-    "location": "HR8-24",
-    "claimedBy": 12,
-    "createdAt": "2017-05-30 01:55:30",
-    "claimedAt": "2017-05-30 02:10:30",
-    "closedAt": "2017-05-30 02:33:30",
-    "updatedAt": "2017-05-30 02:33:30",
-    "status": "Closed",
-    "userId": 26
-  },
-  {
-    "category": "MongoDB",
-    "description": "I am having an issue with MongoDB. Can I please have some help figuring out the issue I am having with MongoDB.",
-    "location": "HR8-03",
-    "claimedBy": 16,
-    "createdAt": "2017-06-11 16:24:46",
-    "claimedAt": "2017-06-11 16:34:46",
-    "closedAt": "2017-06-11 16:45:46",
-    "updatedAt": "2017-06-11 16:45:46",
-    "status": "Closed",
-    "userId": 30
-  },
-  {
-    "category": "MySQL",
-    "description": "I am having an issue with MySQL. Can I please have some help figuring out the issue I am having with MySQL.",
-    "location": "HR8-08",
-    "claimedBy": 20,
-    "createdAt": "2017-05-06 14:10:55",
-    "claimedAt": "2017-05-06 14:38:55",
-    "closedAt": "2017-05-06 14:48:55",
-    "updatedAt": "2017-05-06 14:48:55",
-    "status": "Closed",
-    "userId": 10
-  },
-  {
-    "category": "MySQL",
-    "description": "I am having an issue with MySQL. Can I please have some help figuring out the issue I am having with MySQL.",
-    "location": "HR8-11",
-    "claimedBy": 16,
-    "createdAt": "2017-05-07 05:20:11",
-    "claimedAt": "2017-05-07 05:38:11",
-    "closedAt": "2017-05-07 05:51:11",
-    "updatedAt": "2017-05-07 05:51:11",
-    "status": "Closed",
-    "userId": 26
-  },
-  {
-    "category": "Express",
-    "description": "I am having an issue with Express. Can I please have some help figuring out the issue I am having with Express.",
-    "location": "HR8-07",
-    "claimedBy": 22,
-    "createdAt": "2017-06-09 02:36:53",
-    "claimedAt": "2017-06-09 02:44:53",
-    "closedAt": "2017-06-09 02:51:53",
-    "updatedAt": "2017-06-09 02:51:53",
-    "status": "Closed",
-    "userId": 26
-  },
-  {
-    "category": "Node",
-    "description": "I am having an issue with Node. Can I please have some help figuring out the issue I am having with Node.",
-    "location": "HR8-04",
-    "claimedBy": 8,
-    "createdAt": "2017-06-07 02:51:11",
-    "claimedAt": "2017-06-07 03:06:11",
-    "closedAt": "2017-06-07 03:24:11",
-    "updatedAt": "2017-06-07 03:24:11",
-    "status": "Closed",
-    "userId": 14
-  },
-  {
-    "category": "MongoDB",
-    "description": "I am having an issue with MongoDB. Can I please have some help figuring out the issue I am having with MongoDB.",
-    "location": "HR8-11",
-    "claimedBy": 20,
-    "createdAt": "2017-06-13 12:44:55",
-    "claimedAt": "2017-06-13 12:53:55",
-    "closedAt": "2017-06-13 13:08:55",
-    "updatedAt": "2017-06-13 13:08:55",
-    "status": "Closed",
-    "userId": 4
-  },
-  {
-    "category": "React",
-    "description": "I am having an issue with React. Can I please have some help figuring out the issue I am having with React.",
-    "location": "HR8-15",
-    "claimedBy": 9,
-    "createdAt": "2017-06-03 04:07:49",
-    "claimedAt": "2017-06-03 04:24:49",
-    "closedAt": "2017-06-03 04:38:49",
-    "updatedAt": "2017-06-03 04:38:49",
-    "status": "Closed",
-    "userId": 15
-  },
-  {
-    "category": "Backbone",
-    "description": "I am having an issue with Backbone. Can I please have some help figuring out the issue I am having with Backbone.",
-    "location": "HR8-18",
-    "claimedBy": 19,
-    "createdAt": "2017-05-31 18:28:25",
-    "claimedAt": "2017-05-31 18:34:25",
-    "closedAt": "2017-05-31 18:53:25",
-    "updatedAt": "2017-05-31 18:53:25",
-    "status": "Closed",
-    "userId": 19
-  },
-  {
-    "category": "Recursion",
-    "description": "I am having an issue with Recursion. Can I please have some help figuring out the issue I am having with Recursion.",
-    "location": "HR8-17",
-    "claimedBy": 20,
-    "createdAt": "2017-06-10 08:29:05",
-    "claimedAt": "2017-06-10 08:43:05",
-    "closedAt": "2017-06-10 08:56:05",
-    "updatedAt": "2017-06-10 08:56:05",
-    "status": "Closed",
-    "userId": 25
-  },
-  {
-    "category": "Data Structures",
-    "description": "I am having an issue with Data Structures. Can I please have some help figuring out the issue I am having with Data Structures.",
-    "location": "HR8-19",
-    "claimedBy": 5,
-    "createdAt": "2017-05-21 12:34:25",
-    "claimedAt": "2017-05-21 12:55:25",
-    "closedAt": "2017-05-21 13:20:25",
-    "updatedAt": "2017-05-21 13:20:25",
-    "status": "Closed",
-    "userId": 18
-  },
-  {
-    "category": "Backbone",
-    "description": "I am having an issue with Backbone. Can I please have some help figuring out the issue I am having with Backbone.",
-    "location": "HR8-01",
-    "claimedBy": 17,
-    "createdAt": "2017-06-12 08:21:29",
-    "claimedAt": "2017-06-12 08:39:29",
-    "closedAt": "2017-06-12 09:00:29",
-    "updatedAt": "2017-06-12 09:00:29",
-    "status": "Closed",
-    "userId": 26
-  },
-  {
-    "category": "MongoDB",
-    "description": "I am having an issue with MongoDB. Can I please have some help figuring out the issue I am having with MongoDB.",
-    "location": "HR8-18",
-    "claimedBy": 15,
-    "createdAt": "2017-06-23 20:17:13",
-    "claimedAt": "2017-06-23 20:28:13",
-    "closedAt": "2017-06-23 20:38:13",
-    "updatedAt": "2017-06-23 20:38:13",
-    "status": "Closed",
-    "userId": 12
-  },
-  {
-    "category": "MongoDB",
-    "description": "I am having an issue with MongoDB. Can I please have some help figuring out the issue I am having with MongoDB.",
-    "location": "HR8-09",
-    "claimedBy": 11,
-    "createdAt": "2017-05-14 01:34:06",
-    "claimedAt": "2017-05-14 01:40:06",
-    "closedAt": "2017-05-14 01:58:06",
-    "updatedAt": "2017-05-14 01:58:06",
-    "status": "Closed",
-    "userId": 22
-  },
-  {
-    "category": "Backbone",
-    "description": "I am having an issue with Backbone. Can I please have some help figuring out the issue I am having with Backbone.",
-    "location": "HR8-14",
-    "claimedBy": 21,
-    "createdAt": "2017-05-09 12:59:55",
-    "claimedAt": "2017-05-09 13:27:55",
-    "closedAt": "2017-05-09 13:41:55",
-    "updatedAt": "2017-05-09 13:41:55",
-    "status": "Closed",
-    "userId": 21
-  },
-  {
-    "category": "React",
-    "description": "I am having an issue with React. Can I please have some help figuring out the issue I am having with React.",
-    "location": "HR8-02",
-    "claimedBy": 23,
-    "createdAt": "2017-05-04 07:30:42",
-    "claimedAt": "2017-05-04 07:39:42",
-    "closedAt": "2017-05-04 07:54:42",
-    "updatedAt": "2017-05-04 07:54:42",
-    "status": "Closed",
-    "userId": 15
-  },
-  {
-    "category": "Angular",
-    "description": "I am having an issue with Angular. Can I please have some help figuring out the issue I am having with Angular.",
-    "location": "HR8-20",
-    "claimedBy": 8,
-    "createdAt": "2017-06-05 20:52:24",
-    "claimedAt": "2017-06-05 20:57:24",
-    "closedAt": "2017-06-05 21:07:24",
-    "updatedAt": "2017-06-05 21:07:24",
-    "status": "Closed",
-    "userId": 7
-  },
-  {
-    "category": "Data Structures",
-    "description": "I am having an issue with Data Structures. Can I please have some help figuring out the issue I am having with Data Structures.",
-    "location": "HR8-18",
-    "claimedBy": 22,
-    "createdAt": "2017-06-23 23:02:40",
-    "claimedAt": "2017-06-23 23:28:40",
-    "closedAt": "2017-06-23 23:50:40",
-    "updatedAt": "2017-06-23 23:50:40",
-    "status": "Closed",
-    "userId": 23
-  },
-  {
-    "category": "Data Structures",
-    "description": "I am having an issue with Data Structures. Can I please have some help figuring out the issue I am having with Data Structures.",
-    "location": "HR8-06",
-    "claimedBy": 10,
-    "createdAt": "2017-05-28 03:10:54",
-    "claimedAt": "2017-05-28 03:18:54",
-    "closedAt": "2017-05-28 03:35:54",
-    "updatedAt": "2017-05-28 03:35:54",
-    "status": "Closed",
-    "userId": 9
-  },
-  {
-    "category": "MySQL",
-    "description": "I am having an issue with MySQL. Can I please have some help figuring out the issue I am having with MySQL.",
-    "location": "HR8-04",
-    "claimedBy": 22,
-    "createdAt": "2017-06-15 19:34:28",
-    "claimedAt": "2017-06-15 19:42:28",
-    "closedAt": "2017-06-15 19:54:28",
-    "updatedAt": "2017-06-15 19:54:28",
-    "status": "Closed",
-    "userId": 6
-  },
-  {
-    "category": "Backbone",
-    "description": "I am having an issue with Backbone. Can I please have some help figuring out the issue I am having with Backbone.",
-    "location": "HR8-08",
-    "claimedBy": 17,
-    "createdAt": "2017-05-21 22:01:24",
-    "claimedAt": "2017-05-21 22:07:24",
-    "closedAt": "2017-05-21 22:34:24",
-    "updatedAt": "2017-05-21 22:34:24",
-    "status": "Closed",
-    "userId": 15
-  },
-  {
-    "category": "Express",
-    "description": "I am having an issue with Express. Can I please have some help figuring out the issue I am having with Express.",
-    "location": "HR8-03",
-    "claimedBy": 8,
-    "createdAt": "2017-05-11 22:51:27",
-    "claimedAt": "2017-05-11 23:16:27",
-    "closedAt": "2017-05-11 23:37:27",
-    "updatedAt": "2017-05-11 23:37:27",
-    "status": "Closed",
-    "userId": 25
-  },
-  {
-    "category": "MySQL",
-    "description": "I am having an issue with MySQL. Can I please have some help figuring out the issue I am having with MySQL.",
-    "location": "HR8-10",
-    "claimedBy": 1,
-    "createdAt": "2017-06-15 01:33:03",
-    "claimedAt": "2017-06-15 01:58:03",
-    "closedAt": "2017-06-15 02:26:03",
-    "updatedAt": "2017-06-15 02:26:03",
-    "status": "Closed",
-    "userId": 11
-  },
-  {
-    "category": "Express",
-    "description": "I am having an issue with Express. Can I please have some help figuring out the issue I am having with Express.",
-    "location": "HR8-22",
-    "claimedBy": 24,
-    "createdAt": "2017-05-12 10:24:39",
-    "claimedAt": "2017-05-12 10:53:39",
-    "closedAt": "2017-05-12 11:18:39",
-    "updatedAt": "2017-05-12 11:18:39",
-    "status": "Closed",
-    "userId": 30
   },
   {
     "category": "MongoDB",
@@ -1153,6 +425,836 @@ module.exports.tickets = [
     "userId": 5
   },
   {
+    "category": "React",
+    "description": "I am having an issue with React. Can I please have some help figuring out the issue I am having with React.",
+    "location": "HR8-04",
+    "claimedBy": 6,
+    "createdAt": "2017-05-10 14:12:40",
+    "claimedAt": "2017-05-10 14:25:40",
+    "closedAt": "2017-05-10 14:38:40",
+    "updatedAt": "2017-05-10 14:38:40",
+    "status": "Closed",
+    "private": false,
+    "userId": 10
+  },
+  {
+    "category": "Node",
+    "description": "I am having an issue with Node. Can I please have some help figuring out the issue I am having with Node.",
+    "location": "HR8-22",
+    "claimedBy": 8,
+    "createdAt": "2017-06-17 16:13:13",
+    "claimedAt": "2017-06-17 16:27:13",
+    "closedAt": "2017-06-17 16:53:13",
+    "updatedAt": "2017-06-17 16:53:13",
+    "status": "Closed",
+    "private": false,
+    "userId": 30
+  },
+  {
+    "category": "Angular",
+    "description": "I am having an issue with Angular. Can I please have some help figuring out the issue I am having with Angular.",
+    "location": "HR8-14",
+    "claimedBy": 4,
+    "createdAt": "2017-06-18 16:29:22",
+    "claimedAt": "2017-06-18 16:40:22",
+    "closedAt": "2017-06-18 16:52:22",
+    "updatedAt": "2017-06-18 16:52:22",
+    "status": "Closed",
+    "private": false,
+    "userId": 13
+  },
+  {
+    "category": "MySQL",
+    "description": "I am having an issue with MySQL. Can I please have some help figuring out the issue I am having with MySQL.",
+    "location": "HR8-12",
+    "claimedBy": 2,
+    "createdAt": "2017-05-08 10:10:33",
+    "claimedAt": "2017-05-08 10:28:33",
+    "closedAt": "2017-05-08 10:58:33",
+    "updatedAt": "2017-05-08 10:58:33",
+    "status": "Closed",
+    "private": false,
+    "userId": 15
+  },
+  {
+    "category": "Data Structures",
+    "description": "I am having an issue with Data Structures. Can I please have some help figuring out the issue I am having with Data Structures.",
+    "location": "HR8-20",
+    "claimedBy": 18,
+    "createdAt": "2017-06-11 22:29:53",
+    "claimedAt": "2017-06-11 22:57:53",
+    "closedAt": "2017-06-11 23:13:53",
+    "updatedAt": "2017-06-11 23:13:53",
+    "status": "Closed",
+    "private": false,
+    "userId": 19
+  },
+  {
+    "category": "Node",
+    "description": "I am having an issue with Node. Can I please have some help figuring out the issue I am having with Node.",
+    "location": "HR8-12",
+    "claimedBy": 22,
+    "createdAt": "2017-06-23 12:54:01",
+    "claimedAt": "2017-06-23 13:19:01",
+    "closedAt": "2017-06-23 13:47:01",
+    "updatedAt": "2017-06-23 13:47:01",
+    "private": false,
+    "userId": 26
+  },
+  {
+    "category": "Backbone",
+    "description": "I am having an issue with Backbone. Can I please have some help figuring out the issue I am having with Backbone.",
+    "location": "HR8-12",
+    "claimedBy": 13,
+    "createdAt": "2017-06-19 03:04:17",
+    "claimedAt": "2017-06-19 03:16:17",
+    "closedAt": "2017-06-19 03:26:17",
+    "updatedAt": "2017-06-19 03:26:17",
+    "status": "Closed",
+    "private": false,
+    "userId": 22
+  },
+  {
+    "category": "React",
+    "description": "I am having an issue with React. Can I please have some help figuring out the issue I am having with React.",
+    "location": "HR8-05",
+    "claimedBy": 11,
+    "createdAt": "2017-06-02 11:06:15",
+    "claimedAt": "2017-06-02 11:36:15",
+    "closedAt": "2017-06-02 11:56:15",
+    "updatedAt": "2017-06-02 11:56:15",
+    "status": "Closed",
+    "private": false,
+    "userId": 21
+  },
+  {
+    "category": "MySQL",
+    "description": "I am having an issue with MySQL. Can I please have some help figuring out the issue I am having with MySQL.",
+    "location": "HR8-18",
+    "claimedBy": 18,
+    "createdAt": "2017-05-29 14:41:47",
+    "claimedAt": "2017-05-29 15:06:47",
+    "closedAt": "2017-05-29 15:26:47",
+    "updatedAt": "2017-05-29 15:26:47",
+    "status": "Closed",
+    "private": false,
+    "userId": 7
+  },
+  {
+    "category": "React",
+    "description": "I am having an issue with React. Can I please have some help figuring out the issue I am having with React.",
+    "location": "HR8-10",
+    "claimedBy": 4,
+    "createdAt": "2017-06-03 08:46:27",
+    "claimedAt": "2017-06-03 08:50:27",
+    "closedAt": "2017-06-03 09:02:27",
+    "updatedAt": "2017-06-03 09:02:27",
+    "status": "Closed",
+    "private": false,
+    "userId": 29
+  },
+  {
+    "category": "Backbone",
+    "description": "I am having an issue with Backbone. Can I please have some help figuring out the issue I am having with Backbone.",
+    "location": "HR8-24",
+    "claimedBy": 19,
+    "createdAt": "2017-06-18 06:37:02",
+    "claimedAt": "2017-06-18 07:02:02",
+    "closedAt": "2017-06-18 07:12:02",
+    "updatedAt": "2017-06-18 07:12:02",
+    "status": "Closed",
+    "private": false,
+    "userId": 13
+  },
+  {
+    "category": "Data Structures",
+    "description": "I am having an issue with Data Structures. Can I please have some help figuring out the issue I am having with Data Structures.",
+    "location": "HR8-17",
+    "claimedBy": 10,
+    "createdAt": "2017-06-02 10:38:53",
+    "claimedAt": "2017-06-02 10:48:53",
+    "closedAt": "2017-06-02 11:09:53",
+    "updatedAt": "2017-06-02 11:09:53",
+    "status": "Closed",
+    "private": false,
+    "userId": 19
+  },
+  {
+    "category": "MongoDB",
+    "description": "I am having an issue with MongoDB. Can I please have some help figuring out the issue I am having with MongoDB.",
+    "location": "HR8-05",
+    "claimedBy": 18,
+    "createdAt": "2017-05-01 13:39:21",
+    "claimedAt": "2017-05-01 13:49:21",
+    "closedAt": "2017-05-01 14:09:21",
+    "updatedAt": "2017-05-01 14:09:21",
+    "status": "Closed",
+    "private": false,
+    "userId": 7
+  },
+  {
+    "category": "Data Structures",
+    "description": "I am having an issue with Data Structures. Can I please have some help figuring out the issue I am having with Data Structures.",
+    "location": "HR8-10",
+    "claimedBy": 7,
+    "createdAt": "2017-05-13 01:48:12",
+    "claimedAt": "2017-05-13 02:16:12",
+    "closedAt": "2017-05-13 02:31:12",
+    "updatedAt": "2017-05-13 02:31:12",
+    "status": "Closed",
+    "private": false,
+    "userId": 16
+  },
+  {
+    "category": "Express",
+    "description": "I am having an issue with Express. Can I please have some help figuring out the issue I am having with Express.",
+    "location": "HR8-13",
+    "claimedBy": 7,
+    "createdAt": "2017-05-27 08:09:11",
+    "claimedAt": "2017-05-27 08:22:11",
+    "closedAt": "2017-05-27 08:35:11",
+    "updatedAt": "2017-05-27 08:35:11",
+    "status": "Closed",
+    "private": false,
+    "userId": 23
+  },
+  {
+    "category": "React",
+    "description": "I am having an issue with React. Can I please have some help figuring out the issue I am having with React.",
+    "location": "HR8-03",
+    "claimedBy": 22,
+    "createdAt": "2017-06-03 16:15:00",
+    "claimedAt": "2017-06-03 16:41:00",
+    "closedAt": "2017-06-03 17:10:00",
+    "updatedAt": "2017-06-03 17:10:00",
+    "status": "Closed",
+    "private": false,
+    "userId": 26
+  },
+  {
+    "category": "Backbone",
+    "description": "I am having an issue with Backbone. Can I please have some help figuring out the issue I am having with Backbone.",
+    "location": "HR8-16",
+    "claimedBy": 14,
+    "createdAt": "2017-06-23 05:46:09",
+    "claimedAt": "2017-06-23 06:08:09",
+    "closedAt": "2017-06-23 06:28:09",
+    "updatedAt": "2017-06-23 06:28:09",
+    "private": false,
+    "userId": 21
+  },
+  {
+    "category": "Recursion",
+    "description": "I am having an issue with Recursion. Can I please have some help figuring out the issue I am having with Recursion.",
+    "location": "HR8-01",
+    "claimedBy": 22,
+    "createdAt": "2017-06-23 19:59:32",
+    "claimedAt": "2017-06-23 20:28:32",
+    "closedAt": "2017-06-23 20:56:32",
+    "updatedAt": "2017-06-23 20:56:32",
+    "status": "Closed",
+    "private": false,
+    "userId": 24
+  },
+  {
+    "category": "Backbone",
+    "description": "I am having an issue with Backbone. Can I please have some help figuring out the issue I am having with Backbone.",
+    "location": "HR8-17",
+    "claimedBy": 5,
+    "createdAt": "2017-05-27 13:27:10",
+    "claimedAt": "2017-05-27 13:45:10",
+    "closedAt": "2017-05-27 13:57:10",
+    "updatedAt": "2017-05-27 13:57:10",
+    "private": false,
+    "userId": 4
+  },
+  {
+    "category": "MySQL",
+    "description": "I am having an issue with MySQL. Can I please have some help figuring out the issue I am having with MySQL.",
+    "location": "HR8-10",
+    "claimedBy": 15,
+    "createdAt": "2017-05-24 00:06:07",
+    "claimedAt": "2017-05-24 00:31:07",
+    "closedAt": "2017-05-24 00:54:07",
+    "updatedAt": "2017-05-24 00:54:07",
+    "status": "Closed",
+    "private": false,
+    "userId": 29
+  },
+  {
+    "category": "Node",
+    "description": "I am having an issue with Node. Can I please have some help figuring out the issue I am having with Node.",
+    "location": "HR8-24",
+    "claimedBy": 10,
+    "createdAt": "2017-06-20 09:59:18",
+    "claimedAt": "2017-06-20 10:25:18",
+    "closedAt": "2017-06-20 10:37:18",
+    "updatedAt": "2017-06-20 10:37:18",
+    "private": false,
+    "userId": 16
+  },
+  {
+    "category": "Angular",
+    "description": "I am having an issue with Angular. Can I please have some help figuring out the issue I am having with Angular.",
+    "location": "HR8-06",
+    "claimedBy": 22,
+    "createdAt": "2017-05-28 17:32:49",
+    "claimedAt": "2017-05-28 17:35:49",
+    "closedAt": "2017-05-28 18:03:49",
+    "updatedAt": "2017-05-28 18:03:49",
+    "status": "Closed",
+    "private": false,
+    "userId": 26
+  },
+  {
+    "category": "Data Structures",
+    "description": "I am having an issue with Data Structures. Can I please have some help figuring out the issue I am having with Data Structures.",
+    "location": "HR8-16",
+    "claimedBy": 22,
+    "createdAt": "2017-05-17 00:14:21",
+    "claimedAt": "2017-05-17 00:40:21",
+    "closedAt": "2017-05-17 00:51:21",
+    "updatedAt": "2017-05-17 00:51:21",
+    "status": "Closed",
+    "private": false,
+    "userId": 26
+  },
+ 
+  {
+    "category": "MongoDB",
+    "description": "I am having an issue with MongoDB. Can I please have some help figuring out the issue I am having with MongoDB.",
+    "location": "HR8-16",
+    "claimedBy": 4,
+    "createdAt": "2017-05-03 18:15:44",
+    "claimedAt": "2017-05-03 18:25:44",
+    "closedAt": "2017-05-03 18:46:44",
+    "updatedAt": "2017-05-03 18:46:44",
+    "status": "Closed",
+    "private": false,
+    "userId": 11
+  },
+  {
+    "category": "Data Structures",
+    "description": "I am having an issue with Data Structures. Can I please have some help figuring out the issue I am having with Data Structures.",
+    "location": "HR8-12",
+    "claimedBy": 21,
+    "createdAt": "2017-05-16 08:34:22",
+    "claimedAt": "2017-05-16 08:58:22",
+    "closedAt": "2017-05-16 09:24:22",
+    "updatedAt": "2017-05-16 09:24:22",
+    "status": "Closed",
+    "private": false,
+    "userId": 20
+  },
+  {
+    "category": "Angular",
+    "description": "I am having an issue with Angular. Can I please have some help figuring out the issue I am having with Angular.",
+    "location": "HR8-04",
+    "claimedBy": 6,
+    "createdAt": "2017-06-23 19:46:49",
+    "claimedAt": "2017-06-23 19:51:49",
+    "closedAt": "2017-06-23 20:05:49",
+    "updatedAt": "2017-06-23 20:05:49",
+    "status": "Closed",
+    "private": false,
+    "userId": 5
+  },
+  {
+    "category": "React",
+    "description": "I am having an issue with React. Can I please have some help figuring out the issue I am having with React.",
+    "location": "HR8-01",
+    "claimedBy": 15,
+    "createdAt": "2017-05-16 07:51:32",
+    "claimedAt": "2017-05-16 08:00:32",
+    "closedAt": "2017-05-16 08:27:32",
+    "updatedAt": "2017-05-16 08:27:32",
+    "status": "Closed",
+    "private": false,
+    "userId": 21
+  },
+  {
+    "category": "Express",
+    "description": "I am having an issue with Express. Can I please have some help figuring out the issue I am having with Express.",
+    "location": "HR8-06",
+    "claimedBy": 2,
+    "createdAt": "2017-06-15 19:35:00",
+    "claimedAt": "2017-06-15 19:46:00",
+    "closedAt": "2017-06-15 20:14:00",
+    "updatedAt": "2017-06-15 20:14:00",
+    "status": "Closed",
+    "private": false,
+    "userId": 15
+  },
+  {
+    "category": "Angular",
+    "description": "I am having an issue with Angular. Can I please have some help figuring out the issue I am having with Angular.",
+    "location": "HR8-02",
+    "claimedBy": 20,
+    "createdAt": "2017-05-20 19:21:03",
+    "claimedAt": "2017-05-20 19:42:03",
+    "closedAt": "2017-05-20 19:52:03",
+    "updatedAt": "2017-05-20 19:52:03",
+    "status": "Closed",
+    "private": false,
+    "userId": 4
+  },
+  {
+    "category": "MongoDB",
+    "description": "I am having an issue with MongoDB. Can I please have some help figuring out the issue I am having with MongoDB.",
+    "location": "HR8-03",
+    "claimedBy": 5,
+    "createdAt": "2017-06-22 13:28:09",
+    "claimedAt": "2017-06-22 13:52:09",
+    "closedAt": "2017-06-22 14:14:09",
+    "updatedAt": "2017-06-22 14:14:09",
+    "status": "Closed",
+    "private": false,
+    "userId": 28
+  },
+  {
+    "category": "React",
+    "description": "I am having an issue with React. Can I please have some help figuring out the issue I am having with React.",
+    "location": "HR8-05",
+    "claimedBy": 17,
+    "createdAt": "2017-05-23 10:50:55",
+    "claimedAt": "2017-05-23 11:20:55",
+    "closedAt": "2017-05-23 11:30:55",
+    "updatedAt": "2017-05-23 11:30:55",
+    "status": "Closed",
+    "private": false,
+    "userId": 15
+  },
+  {
+    "category": "React",
+    "description": "I am having an issue with React. Can I please have some help figuring out the issue I am having with React.",
+    "location": "HR8-02",
+    "claimedBy": 2,
+    "createdAt": "2017-05-17 00:19:06",
+    "claimedAt": "2017-05-17 00:40:06",
+    "closedAt": "2017-05-17 01:04:06",
+    "updatedAt": "2017-05-17 01:04:06",
+    "status": "Closed",
+    "private": false,
+    "userId": 25
+  },
+  {
+    "category": "Express",
+    "description": "I am having an issue with Express. Can I please have some help figuring out the issue I am having with Express.",
+    "location": "HR8-03",
+    "claimedBy": 17,
+    "createdAt": "2017-06-05 00:27:41",
+    "claimedAt": "2017-06-05 00:36:41",
+    "closedAt": "2017-06-05 00:52:41",
+    "updatedAt": "2017-06-05 00:52:41",
+    "status": "Closed",
+    "private": false,
+    "userId": 4
+  },
+  {
+    "category": "Node",
+    "description": "I am having an issue with Node. Can I please have some help figuring out the issue I am having with Node.",
+    "location": "HR8-14",
+    "claimedBy": 1,
+    "createdAt": "2017-06-03 10:39:26",
+    "claimedAt": "2017-06-03 10:47:26",
+    "closedAt": "2017-06-03 11:04:26",
+    "updatedAt": "2017-06-03 11:04:26",
+    "status": "Closed",
+    "private": false,
+    "userId": 26
+  },
+  {
+    "category": "React",
+    "description": "I am having an issue with React. Can I please have some help figuring out the issue I am having with React.",
+    "location": "HR8-15",
+    "claimedBy": 4,
+    "createdAt": "2017-05-31 07:32:46",
+    "claimedAt": "2017-05-31 07:50:46",
+    "closedAt": "2017-05-31 08:11:46",
+    "updatedAt": "2017-05-31 08:11:46",
+    "status": "Closed",
+    "private": false,
+    "userId": 22
+  },
+  {
+    "category": "Angular",
+    "description": "I am having an issue with Angular. Can I please have some help figuring out the issue I am having with Angular.",
+    "location": "HR8-07",
+    "claimedBy": 2,
+    "createdAt": "2017-06-20 07:13:44",
+    "claimedAt": "2017-06-20 07:17:44",
+    "closedAt": "2017-06-20 07:29:44",
+    "updatedAt": "2017-06-20 07:29:44",
+    "status": "Closed",
+    "private": false,
+    "userId": 19
+  },
+  
+  {
+    "category": "MongoDB",
+    "description": "I am having an issue with MongoDB. Can I please have some help figuring out the issue I am having with MongoDB.",
+    "location": "HR8-11",
+    "claimedBy": 17,
+    "createdAt": "2017-06-04 00:15:25",
+    "claimedAt": "2017-06-04 00:40:25",
+    "closedAt": "2017-06-04 01:02:25",
+    "updatedAt": "2017-06-04 01:02:25",
+    "status": "Closed",
+    "private": false,
+    "userId": 23
+  },
+  {
+    "category": "Node",
+    "description": "I am having an issue with Node. Can I please have some help figuring out the issue I am having with Node.",
+    "location": "HR8-15",
+    "claimedBy": 19,
+    "createdAt": "2017-05-20 18:05:24",
+    "claimedAt": "2017-05-20 18:32:24",
+    "closedAt": "2017-05-20 18:57:24",
+    "updatedAt": "2017-05-20 18:57:24",
+    "status": "Closed",
+    "private": false,
+    "userId": 22
+  },
+  {
+    "category": "React",
+    "description": "I am having an issue with React. Can I please have some help figuring out the issue I am having with React.",
+    "location": "HR8-15",
+    "claimedBy": 13,
+    "createdAt": "2017-06-05 16:43:16",
+    "claimedAt": "2017-06-05 16:55:16",
+    "closedAt": "2017-06-05 17:24:16",
+    "updatedAt": "2017-06-05 17:24:16",
+    "status": "Closed",
+    "private": false,
+    "userId": 8
+  },
+  {
+    "category": "Recursion",
+    "description": "I am having an issue with Recursion. Can I please have some help figuring out the issue I am having with Recursion.",
+    "location": "HR8-24",
+    "claimedBy": 12,
+    "createdAt": "2017-05-30 01:55:30",
+    "claimedAt": "2017-05-30 02:10:30",
+    "closedAt": "2017-05-30 02:33:30",
+    "updatedAt": "2017-05-30 02:33:30",
+    "status": "Closed",
+    "private": false,
+    "userId": 26
+  },
+  {
+    "category": "MongoDB",
+    "description": "I am having an issue with MongoDB. Can I please have some help figuring out the issue I am having with MongoDB.",
+    "location": "HR8-03",
+    "claimedBy": 16,
+    "createdAt": "2017-06-11 16:24:46",
+    "claimedAt": "2017-06-11 16:34:46",
+    "closedAt": "2017-06-11 16:45:46",
+    "updatedAt": "2017-06-11 16:45:46",
+    "status": "Closed",
+    "private": false,
+    "userId": 30
+  },
+  {
+    "category": "MySQL",
+    "description": "I am having an issue with MySQL. Can I please have some help figuring out the issue I am having with MySQL.",
+    "location": "HR8-08",
+    "claimedBy": 20,
+    "createdAt": "2017-05-06 14:10:55",
+    "claimedAt": "2017-05-06 14:38:55",
+    "closedAt": "2017-05-06 14:48:55",
+    "updatedAt": "2017-05-06 14:48:55",
+    "status": "Closed",
+    "private": false,
+    "userId": 10
+  },
+  {
+    "category": "MySQL",
+    "description": "I am having an issue with MySQL. Can I please have some help figuring out the issue I am having with MySQL.",
+    "location": "HR8-11",
+    "claimedBy": 16,
+    "createdAt": "2017-05-07 05:20:11",
+    "claimedAt": "2017-05-07 05:38:11",
+    "closedAt": "2017-05-07 05:51:11",
+    "updatedAt": "2017-05-07 05:51:11",
+    "status": "Closed",
+    "private": false,
+    "userId": 26
+  },
+  {
+    "category": "Express",
+    "description": "I am having an issue with Express. Can I please have some help figuring out the issue I am having with Express.",
+    "location": "HR8-07",
+    "claimedBy": 22,
+    "createdAt": "2017-06-09 02:36:53",
+    "claimedAt": "2017-06-09 02:44:53",
+    "closedAt": "2017-06-09 02:51:53",
+    "updatedAt": "2017-06-09 02:51:53",
+    "status": "Closed",
+    "private": false,
+    "userId": 26
+  },
+  {
+    "category": "Node",
+    "description": "I am having an issue with Node. Can I please have some help figuring out the issue I am having with Node.",
+    "location": "HR8-04",
+    "claimedBy": 8,
+    "createdAt": "2017-06-07 02:51:11",
+    "claimedAt": "2017-06-07 03:06:11",
+    "closedAt": "2017-06-07 03:24:11",
+    "updatedAt": "2017-06-07 03:24:11",
+    "status": "Closed",
+    "private": false,
+    "userId": 14
+  },
+  {
+    "category": "MongoDB",
+    "description": "I am having an issue with MongoDB. Can I please have some help figuring out the issue I am having with MongoDB.",
+    "location": "HR8-11",
+    "claimedBy": 20,
+    "createdAt": "2017-06-13 12:44:55",
+    "claimedAt": "2017-06-13 12:53:55",
+    "closedAt": "2017-06-13 13:08:55",
+    "updatedAt": "2017-06-13 13:08:55",
+    "status": "Closed",
+    "private": false,
+    "userId": 4
+  },
+  {
+    "category": "React",
+    "description": "I am having an issue with React. Can I please have some help figuring out the issue I am having with React.",
+    "location": "HR8-15",
+    "claimedBy": 9,
+    "createdAt": "2017-06-03 04:07:49",
+    "claimedAt": "2017-06-03 04:24:49",
+    "closedAt": "2017-06-03 04:38:49",
+    "updatedAt": "2017-06-03 04:38:49",
+    "status": "Closed",
+    "private": false,
+    "userId": 15
+  },
+  {
+    "category": "Backbone",
+    "description": "I am having an issue with Backbone. Can I please have some help figuring out the issue I am having with Backbone.",
+    "location": "HR8-18",
+    "claimedBy": 19,
+    "createdAt": "2017-05-31 18:28:25",
+    "claimedAt": "2017-05-31 18:34:25",
+    "closedAt": "2017-05-31 18:53:25",
+    "updatedAt": "2017-05-31 18:53:25",
+    "status": "Closed",
+    "private": false,
+    "userId": 19
+  },
+  {
+    "category": "Recursion",
+    "description": "I am having an issue with Recursion. Can I please have some help figuring out the issue I am having with Recursion.",
+    "location": "HR8-17",
+    "claimedBy": 20,
+    "createdAt": "2017-06-10 08:29:05",
+    "claimedAt": "2017-06-10 08:43:05",
+    "closedAt": "2017-06-10 08:56:05",
+    "updatedAt": "2017-06-10 08:56:05",
+    "status": "Closed",
+    "private": false,
+    "userId": 25
+  },
+  {
+    "category": "Data Structures",
+    "description": "I am having an issue with Data Structures. Can I please have some help figuring out the issue I am having with Data Structures.",
+    "location": "HR8-19",
+    "claimedBy": 5,
+    "createdAt": "2017-05-21 12:34:25",
+    "claimedAt": "2017-05-21 12:55:25",
+    "closedAt": "2017-05-21 13:20:25",
+    "updatedAt": "2017-05-21 13:20:25",
+    "status": "Closed",
+    "private": false,
+    "userId": 18
+  },
+  {
+    "category": "Backbone",
+    "description": "I am having an issue with Backbone. Can I please have some help figuring out the issue I am having with Backbone.",
+    "location": "HR8-01",
+    "claimedBy": 17,
+    "createdAt": "2017-06-12 08:21:29",
+    "claimedAt": "2017-06-12 08:39:29",
+    "closedAt": "2017-06-12 09:00:29",
+    "updatedAt": "2017-06-12 09:00:29",
+    "status": "Closed",
+    "private": false,
+    "userId": 26
+  },
+  {
+    "category": "MongoDB",
+    "description": "I am having an issue with MongoDB. Can I please have some help figuring out the issue I am having with MongoDB.",
+    "location": "HR8-18",
+    "claimedBy": 15,
+    "createdAt": "2017-06-23 20:17:13",
+    "claimedAt": "2017-06-23 20:28:13",
+    "closedAt": "2017-06-23 20:38:13",
+    "updatedAt": "2017-06-23 20:38:13",
+    "status": "Closed",
+    "private": false,
+    "userId": 12
+  },
+  {
+    "category": "MongoDB",
+    "description": "I am having an issue with MongoDB. Can I please have some help figuring out the issue I am having with MongoDB.",
+    "location": "HR8-09",
+    "claimedBy": 11,
+    "createdAt": "2017-05-14 01:34:06",
+    "claimedAt": "2017-05-14 01:40:06",
+    "closedAt": "2017-05-14 01:58:06",
+    "updatedAt": "2017-05-14 01:58:06",
+    "status": "Closed",
+    "private": false,
+    "userId": 22
+  },
+  {
+    "category": "Backbone",
+    "description": "I am having an issue with Backbone. Can I please have some help figuring out the issue I am having with Backbone.",
+    "location": "HR8-14",
+    "claimedBy": 21,
+    "createdAt": "2017-05-09 12:59:55",
+    "claimedAt": "2017-05-09 13:27:55",
+    "closedAt": "2017-05-09 13:41:55",
+    "updatedAt": "2017-05-09 13:41:55",
+    "status": "Closed",
+    "private": false,
+    "userId": 21
+  },
+  {
+    "category": "React",
+    "description": "I am having an issue with React. Can I please have some help figuring out the issue I am having with React.",
+    "location": "HR8-02",
+    "claimedBy": 23,
+    "createdAt": "2017-05-04 07:30:42",
+    "claimedAt": "2017-05-04 07:39:42",
+    "closedAt": "2017-05-04 07:54:42",
+    "updatedAt": "2017-05-04 07:54:42",
+    "status": "Closed",
+    "private": false,
+    "userId": 15
+  },
+  {
+    "category": "Angular",
+    "description": "I am having an issue with Angular. Can I please have some help figuring out the issue I am having with Angular.",
+    "location": "HR8-20",
+    "claimedBy": 8,
+    "createdAt": "2017-06-05 20:52:24",
+    "claimedAt": "2017-06-05 20:57:24",
+    "closedAt": "2017-06-05 21:07:24",
+    "updatedAt": "2017-06-05 21:07:24",
+    "status": "Closed",
+    "private": false,
+    "userId": 7
+  },
+  {
+    "category": "Data Structures",
+    "description": "I am having an issue with Data Structures. Can I please have some help figuring out the issue I am having with Data Structures.",
+    "location": "HR8-18",
+    "claimedBy": 22,
+    "createdAt": "2017-06-23 23:02:40",
+    "claimedAt": "2017-06-23 23:28:40",
+    "closedAt": "2017-06-23 23:50:40",
+    "updatedAt": "2017-06-23 23:50:40",
+    "status": "Closed",
+    "private": false,
+    "userId": 23
+  },
+  {
+    "category": "Data Structures",
+    "description": "I am having an issue with Data Structures. Can I please have some help figuring out the issue I am having with Data Structures.",
+    "location": "HR8-06",
+    "claimedBy": 10,
+    "createdAt": "2017-05-28 03:10:54",
+    "claimedAt": "2017-05-28 03:18:54",
+    "closedAt": "2017-05-28 03:35:54",
+    "updatedAt": "2017-05-28 03:35:54",
+    "status": "Closed",
+    "private": false,
+    "userId": 9
+  },
+  {
+    "category": "MySQL",
+    "description": "I am having an issue with MySQL. Can I please have some help figuring out the issue I am having with MySQL.",
+    "location": "HR8-04",
+    "claimedBy": 22,
+    "createdAt": "2017-06-15 19:34:28",
+    "claimedAt": "2017-06-15 19:42:28",
+    "closedAt": "2017-06-15 19:54:28",
+    "updatedAt": "2017-06-15 19:54:28",
+    "status": "Closed",
+    "private": false,
+    "userId": 6
+  },
+  {
+    "category": "Backbone",
+    "description": "I am having an issue with Backbone. Can I please have some help figuring out the issue I am having with Backbone.",
+    "location": "HR8-08",
+    "claimedBy": 17,
+    "createdAt": "2017-05-21 22:01:24",
+    "claimedAt": "2017-05-21 22:07:24",
+    "closedAt": "2017-05-21 22:34:24",
+    "updatedAt": "2017-05-21 22:34:24",
+    "status": "Closed",
+    "private": false,
+    "userId": 15
+  },
+  {
+    "category": "Express",
+    "description": "I am having an issue with Express. Can I please have some help figuring out the issue I am having with Express.",
+    "location": "HR8-03",
+    "claimedBy": 8,
+    "createdAt": "2017-05-11 22:51:27",
+    "claimedAt": "2017-05-11 23:16:27",
+    "closedAt": "2017-05-11 23:37:27",
+    "updatedAt": "2017-05-11 23:37:27",
+    "status": "Closed",
+    "private": false,
+    "userId": 25
+  },
+  {
+    "category": "MySQL",
+    "description": "I am having an issue with MySQL. Can I please have some help figuring out the issue I am having with MySQL.",
+    "location": "HR8-10",
+    "claimedBy": 1,
+    "createdAt": "2017-06-15 01:33:03",
+    "claimedAt": "2017-06-15 01:58:03",
+    "closedAt": "2017-06-15 02:26:03",
+    "updatedAt": "2017-06-15 02:26:03",
+    "status": "Closed",
+    "private": false,
+    "userId": 11
+  },
+  {
+    "category": "Express",
+    "description": "I am having an issue with Express. Can I please have some help figuring out the issue I am having with Express.",
+    "location": "HR8-22",
+    "claimedBy": 24,
+    "createdAt": "2017-05-12 10:24:39",
+    "claimedAt": "2017-05-12 10:53:39",
+    "closedAt": "2017-05-12 11:18:39",
+    "updatedAt": "2017-05-12 11:18:39",
+    "status": "Closed",
+    "private": false,
+    "userId": 30
+  },
+  {
+    "category": "MongoDB",
+    "description": "I am having an issue with MongoDB. Can I please have some help figuring out the issue I am having with MongoDB.",
+    "location": "HR8-07",
+    "claimedBy": 9,
+    "createdAt": "2017-05-20 21:21:16",
+    "claimedAt": "2017-05-20 21:29:16",
+    "closedAt": "2017-05-20 21:50:16",
+    "updatedAt": "2017-05-20 21:50:16",
+    "status": "Closed",
+    "private": false,
+    "userId": 5
+  },
+  {
     "category": "MySQL",
     "description": "I am having an issue with MySQL. Can I please have some help figuring out the issue I am having with MySQL.",
     "location": "HR8-24",
@@ -1162,6 +1264,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-08 14:51:43",
     "updatedAt": "2017-05-08 14:51:43",
     "status": "Closed",
+    "private": false,
     "userId": 26
   },
   {
@@ -1174,6 +1277,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-26 15:02:18",
     "updatedAt": "2017-05-26 15:02:18",
     "status": "Closed",
+    "private": false,
     "userId": 26
   },
   {
@@ -1186,6 +1290,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-28 02:15:29",
     "updatedAt": "2017-05-28 02:15:29",
     "status": "Closed",
+    "private": false,
     "userId": 21
   },
   {
@@ -1198,6 +1303,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-08 08:08:39",
     "updatedAt": "2017-05-08 08:08:39",
     "status": "Closed",
+    "private": false,
     "userId": 14
   },
   {
@@ -1210,6 +1316,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-04 09:30:03",
     "updatedAt": "2017-06-04 09:30:03",
     "status": "Closed",
+    "private": false,
     "userId": 24
   },
   {
@@ -1222,6 +1329,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-23 11:25:19",
     "updatedAt": "2017-06-23 11:25:19",
     "status": "Closed",
+    "private": false,
     "userId": 14
   },
   {
@@ -1234,6 +1342,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-25 08:59:47",
     "updatedAt": "2017-05-25 08:59:47",
     "status": "Closed",
+    "private": false,
     "userId": 18
   },
   {
@@ -1246,6 +1355,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-15 06:03:09",
     "updatedAt": "2017-06-15 06:03:09",
     "status": "Closed",
+    "private": false,
     "userId": 22
   },
   {
@@ -1258,6 +1368,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-23 00:38:12",
     "updatedAt": "2017-06-23 00:38:12",
     "status": "Closed",
+    "private": false,
     "userId": 7
   },
   {
@@ -1270,6 +1381,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-17 13:44:31",
     "updatedAt": "2017-06-17 13:44:31",
     "status": "Closed",
+    "private": false,
     "userId": 25
   },
   {
@@ -1282,6 +1394,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-28 16:07:06",
     "updatedAt": "2017-05-28 16:07:06",
     "status": "Closed",
+    "private": false,
     "userId": 6
   },
   {
@@ -1294,6 +1407,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-10 07:06:37",
     "updatedAt": "2017-06-10 07:06:37",
     "status": "Closed",
+    "private": false,
     "userId": 26
   },
   {
@@ -1306,6 +1420,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-16 08:25:53",
     "updatedAt": "2017-06-16 08:25:53",
     "status": "Closed",
+    "private": false,
     "userId": 12
   },
   {
@@ -1318,6 +1433,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-28 19:44:59",
     "updatedAt": "2017-05-28 19:44:59",
     "status": "Closed",
+    "private": false,
     "userId": 11
   },
   {
@@ -1330,6 +1446,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-23 19:25:55",
     "updatedAt": "2017-05-23 19:25:55",
     "status": "Closed",
+    "private": false,
     "userId": 19
   },
   {
@@ -1342,6 +1459,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-22 23:04:55",
     "updatedAt": "2017-05-22 23:04:55",
     "status": "Closed",
+    "private": false,
     "userId": 14
   },
   {
@@ -1354,6 +1472,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-01 11:31:03",
     "updatedAt": "2017-06-01 11:31:03",
     "status": "Closed",
+    "private": false,
     "userId": 23
   },
   {
@@ -1366,6 +1485,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-15 16:31:45",
     "updatedAt": "2017-05-15 16:31:45",
     "status": "Closed",
+    "private": false,
     "userId": 9
   },
   {
@@ -1378,6 +1498,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-30 12:45:37",
     "updatedAt": "2017-05-30 12:45:37",
     "status": "Closed",
+    "private": false,
     "userId": 28
   },
   {
@@ -1390,6 +1511,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-10 17:52:21",
     "updatedAt": "2017-06-10 17:52:21",
     "status": "Closed",
+    "private": false,
     "userId": 4
   },
   {
@@ -1402,6 +1524,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-17 12:38:55",
     "updatedAt": "2017-06-17 12:38:55",
     "status": "Closed",
+    "private": false,
     "userId": 4
   },
   {
@@ -1414,6 +1537,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-07 07:52:46",
     "updatedAt": "2017-05-07 07:52:46",
     "status": "Closed",
+    "private": false,
     "userId": 6
   },
   {
@@ -1426,6 +1550,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-25 08:38:33",
     "updatedAt": "2017-05-25 08:38:33",
     "status": "Closed",
+    "private": false,
     "userId": 11
   },
   {
@@ -1438,6 +1563,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-13 02:10:30",
     "updatedAt": "2017-06-13 02:10:30",
     "status": "Closed",
+    "private": false,
     "userId": 25
   },
   {
@@ -1450,6 +1576,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-17 00:43:45",
     "updatedAt": "2017-06-17 00:43:45",
     "status": "Closed",
+    "private": false,
     "userId": 11
   },
   {
@@ -1462,6 +1589,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-27 23:27:56",
     "updatedAt": "2017-05-27 23:27:56",
     "status": "Closed",
+    "private": false,
     "userId": 13
   },
   {
@@ -1474,6 +1602,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-18 12:02:25",
     "updatedAt": "2017-05-18 12:02:25",
     "status": "Closed",
+    "private": false,
     "userId": 15
   },
   {
@@ -1486,6 +1615,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-09 11:21:11",
     "updatedAt": "2017-06-09 11:21:11",
     "status": "Closed",
+    "private": false,
     "userId": 26
   },
   {
@@ -1498,6 +1628,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-08 08:15:13",
     "updatedAt": "2017-05-08 08:15:13",
     "status": "Closed",
+    "private": false,
     "userId": 26
   },
   {
@@ -1510,6 +1641,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-26 11:56:25",
     "updatedAt": "2017-05-26 11:56:25",
     "status": "Closed",
+    "private": false,
     "userId": 30
   },
   {
@@ -1522,6 +1654,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-17 17:22:05",
     "updatedAt": "2017-06-17 17:22:05",
     "status": "Closed",
+    "private": false,
     "userId": 20
   },
   {
@@ -1534,6 +1667,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-05 07:34:20",
     "updatedAt": "2017-05-05 07:34:20",
     "status": "Closed",
+    "private": false,
     "userId": 30
   },
   {
@@ -1546,6 +1680,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-17 20:30:45",
     "updatedAt": "2017-05-17 20:30:45",
     "status": "Closed",
+    "private": false,
     "userId": 20
   },
   {
@@ -1558,6 +1693,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-21 20:33:48",
     "updatedAt": "2017-06-21 20:33:48",
     "status": "Closed",
+    "private": false,
     "userId": 15
   },
   {
@@ -1570,6 +1706,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-21 21:56:22",
     "updatedAt": "2017-06-21 21:56:22",
     "status": "Closed",
+    "private": false,
     "userId": 18
   },
   {
@@ -1582,6 +1719,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-14 04:55:30",
     "updatedAt": "2017-05-14 04:55:30",
     "status": "Closed",
+    "private": false,
     "userId": 13
   },
   {
@@ -1594,6 +1732,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-04 22:05:06",
     "updatedAt": "2017-06-04 22:05:06",
     "status": "Closed",
+    "private": false,
     "userId": 22
   },
   {
@@ -1606,7 +1745,8 @@ module.exports.tickets = [
     "closedAt": "2017-06-20 00:59:04",
     "updatedAt": "2017-06-20 00:59:04",
     "status": "Closed",
-    "userId": 30
+    "userId": 30,
+    "private": false
   },
   {
     "category": "Backbone",
@@ -1618,6 +1758,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-14 01:50:52",
     "updatedAt": "2017-05-14 01:50:52",
     "status": "Closed",
+    "private": false,
     "userId": 30
   },
   {
@@ -1630,6 +1771,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-09 02:26:14",
     "updatedAt": "2017-05-09 02:26:14",
     "status": "Closed",
+    "private": false,
     "userId": 30
   },
   {
@@ -1642,6 +1784,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-18 22:52:51",
     "updatedAt": "2017-05-18 22:52:51",
     "status": "Closed",
+    "private": false,
     "userId": 9
   },
   {
@@ -1654,6 +1797,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-19 15:36:16",
     "updatedAt": "2017-05-19 15:36:16",
     "status": "Closed",
+    "private": false,
     "userId": 6
   },
   {
@@ -1666,6 +1810,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-27 22:35:59",
     "updatedAt": "2017-05-27 22:35:59",
     "status": "Closed",
+    "private": false,
     "userId": 7
   },
   {
@@ -1678,6 +1823,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-30 08:29:02",
     "updatedAt": "2017-05-30 08:29:02",
     "status": "Closed",
+    "private": false,
     "userId": 29
   },
   {
@@ -1690,6 +1836,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-05 18:56:17",
     "updatedAt": "2017-06-05 18:56:17",
     "status": "Closed",
+    "private": false,
     "userId": 24
   },
   {
@@ -1702,6 +1849,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-18 23:03:52",
     "updatedAt": "2017-05-18 23:03:52",
     "status": "Closed",
+    "private": false,
     "userId": 30
   },
   {
@@ -1714,6 +1862,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-30 02:44:38",
     "updatedAt": "2017-05-30 02:44:38",
     "status": "Closed",
+    "private": false,
     "userId": 20
   },
   {
@@ -1726,6 +1875,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-13 19:29:18",
     "updatedAt": "2017-06-13 19:29:18",
     "status": "Closed",
+    "private": false,
     "userId": 16
   },
   {
@@ -1738,6 +1888,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-22 01:26:56",
     "updatedAt": "2017-05-22 01:26:56",
     "status": "Closed",
+    "private": false,
     "userId": 22
   },
   {
@@ -1750,6 +1901,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-14 18:10:28",
     "updatedAt": "2017-05-14 18:10:28",
     "status": "Closed",
+    "private": false,
     "userId": 11
   },
   {
@@ -1762,6 +1914,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-26 03:46:30",
     "updatedAt": "2017-05-26 03:46:30",
     "status": "Closed",
+    "private": false,
     "userId": 9
   },
   {
@@ -1774,6 +1927,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-24 00:43:17",
     "updatedAt": "2017-06-24 00:43:17",
     "status": "Closed",
+    "private": false,
     "userId": 15
   },
   {
@@ -1786,6 +1940,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-04 04:15:54",
     "updatedAt": "2017-06-04 04:15:54",
     "status": "Closed",
+    "private": false,
     "userId": 26
   },
   {
@@ -1798,6 +1953,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-16 02:27:34",
     "updatedAt": "2017-05-16 02:27:34",
     "status": "Closed",
+    "private": false,
     "userId": 28
   },
   {
@@ -1810,6 +1966,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-15 00:35:09",
     "updatedAt": "2017-05-15 00:35:09",
     "status": "Closed",
+    "private": false,
     "userId": 12
   },
   {
@@ -1822,6 +1979,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-06 13:35:22",
     "updatedAt": "2017-05-06 13:35:22",
     "status": "Closed",
+    "private": false,
     "userId": 10
   },
   {
@@ -1834,6 +1992,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-07 04:21:56",
     "updatedAt": "2017-05-07 04:21:56",
     "status": "Closed",
+    "private": false,
     "userId": 18
   },
   {
@@ -1846,6 +2005,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-27 02:49:46",
     "updatedAt": "2017-05-27 02:49:46",
     "status": "Closed",
+    "private": false,
     "userId": 20
   },
   {
@@ -1858,6 +2018,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-17 05:43:54",
     "updatedAt": "2017-06-17 05:43:54",
     "status": "Closed",
+    "private": false,
     "userId": 26
   },
   {
@@ -1870,6 +2031,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-14 03:15:21",
     "updatedAt": "2017-06-14 03:15:21",
     "status": "Closed",
+    "private": false,
     "userId": 28
   },
   {
@@ -1882,6 +2044,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-18 06:55:57",
     "updatedAt": "2017-06-18 06:55:57",
     "status": "Closed",
+    "private": false,
     "userId": 4
   },
   {
@@ -1894,6 +2057,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-23 15:46:35",
     "updatedAt": "2017-06-23 15:46:35",
     "status": "Closed",
+    "private": false,
     "userId": 20
   },
   {
@@ -1906,6 +2070,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-03 01:17:21",
     "updatedAt": "2017-06-03 01:17:21",
     "status": "Closed",
+    "private": false,
     "userId": 14
   },
   {
@@ -1918,6 +2083,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-16 15:16:52",
     "updatedAt": "2017-05-16 15:16:52",
     "status": "Closed",
+    "private": false,
     "userId": 28
   },
   {
@@ -1930,6 +2096,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-10 22:42:48",
     "updatedAt": "2017-05-10 22:42:48",
     "status": "Closed",
+    "private": false,
     "userId": 11
   },
   {
@@ -1942,6 +2109,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-10 07:05:00",
     "updatedAt": "2017-06-10 07:05:00",
     "status": "Closed",
+    "private": false,
     "userId": 8
   },
   {
@@ -1954,6 +2122,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-24 14:26:49",
     "updatedAt": "2017-05-24 14:26:49",
     "status": "Closed",
+    "private": false,
     "userId": 26
   },
   {
@@ -1966,6 +2135,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-14 02:28:01",
     "updatedAt": "2017-05-14 02:28:01",
     "status": "Closed",
+    "private": false,
     "userId": 17
   },
   {
@@ -1978,6 +2148,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-22 01:50:39",
     "updatedAt": "2017-05-22 01:50:39",
     "status": "Closed",
+    "private": false,
     "userId": 26
   },
   {
@@ -1990,6 +2161,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-20 06:54:24",
     "updatedAt": "2017-06-20 06:54:24",
     "status": "Closed",
+    "private": false,
     "userId": 4
   },
   {
@@ -2002,6 +2174,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-24 21:22:03",
     "updatedAt": "2017-05-24 21:22:03",
     "status": "Closed",
+    "private": false,
     "userId": 15
   },
   {
@@ -2014,6 +2187,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-02 22:50:12",
     "updatedAt": "2017-06-02 22:50:12",
     "status": "Closed",
+    "private": false,
     "userId": 16
   },
   {
@@ -2026,6 +2200,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-26 02:41:17",
     "updatedAt": "2017-05-26 02:41:17",
     "status": "Closed",
+    "private": false,
     "userId": 12
   },
   {
@@ -2038,6 +2213,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-11 16:29:48",
     "updatedAt": "2017-06-11 16:29:48",
     "status": "Closed",
+    "private": false,
     "userId": 23
   },
   {
@@ -2050,6 +2226,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-19 04:12:55",
     "updatedAt": "2017-06-19 04:12:55",
     "status": "Closed",
+    "private": false,
     "userId": 16
   },
   {
@@ -2062,6 +2239,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-18 11:44:42",
     "updatedAt": "2017-06-18 11:44:42",
     "status": "Closed",
+    "private": false,
     "userId": 20
   },
   {
@@ -2074,6 +2252,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-20 01:14:01",
     "updatedAt": "2017-06-20 01:14:01",
     "status": "Closed",
+    "private": false,
     "userId": 29
   },
   {
@@ -2086,6 +2265,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-10 20:12:07",
     "updatedAt": "2017-06-10 20:12:07",
     "status": "Closed",
+    "private": false,
     "userId": 6
   },
   {
@@ -2098,6 +2278,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-03 02:42:52",
     "updatedAt": "2017-06-03 02:42:52",
     "status": "Closed",
+    "private": false,
     "userId": 11
   },
   {
@@ -2110,6 +2291,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-16 01:52:22",
     "updatedAt": "2017-06-16 01:52:22",
     "status": "Closed",
+    "private": false,
     "userId": 18
   },
   {
@@ -2122,6 +2304,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-10 15:54:37",
     "updatedAt": "2017-06-10 15:54:37",
     "status": "Closed",
+    "private": false,
     "userId": 15
   },
   {
@@ -2134,6 +2317,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-01 21:37:45",
     "updatedAt": "2017-06-01 21:37:45",
     "status": "Closed",
+    "private": false,
     "userId": 13
   },
   {
@@ -2146,6 +2330,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-28 09:18:11",
     "updatedAt": "2017-05-28 09:18:11",
     "status": "Closed",
+    "private": false,
     "userId": 12
   },
   {
@@ -2158,6 +2343,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-24 17:46:08",
     "updatedAt": "2017-05-24 17:46:08",
     "status": "Closed",
+    "private": false,
     "userId": 23
   },
   {
@@ -2170,6 +2356,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-05 07:32:28",
     "updatedAt": "2017-05-05 07:32:28",
     "status": "Closed",
+    "private": false,
     "userId": 5
   },
   {
@@ -2182,6 +2369,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-07 15:56:51",
     "updatedAt": "2017-05-07 15:56:51",
     "status": "Closed",
+    "private": false,
     "userId": 26
   },
   {
@@ -2194,6 +2382,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-01 02:17:03",
     "updatedAt": "2017-06-01 02:17:03",
     "status": "Closed",
+    "private": false,
     "userId": 4
   },
   {
@@ -2206,6 +2395,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-12 00:03:10",
     "updatedAt": "2017-05-12 00:03:10",
     "status": "Closed",
+    "private": false,
     "userId": 11
   },
   {
@@ -2218,6 +2408,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-01 12:36:39",
     "updatedAt": "2017-05-01 12:36:39",
     "status": "Closed",
+    "private": false,
     "userId": 7
   },
   {
@@ -2230,6 +2421,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-02 19:24:46",
     "updatedAt": "2017-05-02 19:24:46",
     "status": "Closed",
+    "private": false,
     "userId": 25
   },
   {
@@ -2242,6 +2434,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-03 06:58:55",
     "updatedAt": "2017-06-03 06:58:55",
     "status": "Closed",
+    "private": false,
     "userId": 23
   },
   {
@@ -2254,6 +2447,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-20 05:41:36",
     "updatedAt": "2017-06-20 05:41:36",
     "status": "Closed",
+    "private": false,
     "userId": 26
   },
   {
@@ -2266,6 +2460,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-12 05:50:11",
     "updatedAt": "2017-05-12 05:50:11",
     "status": "Closed",
+    "private": false,
     "userId": 9
   },
   {
@@ -2278,6 +2473,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-09 12:08:42",
     "updatedAt": "2017-06-09 12:08:42",
     "status": "Closed",
+    "private": false,
     "userId": 11
   },
   {
@@ -2290,6 +2486,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-05 21:51:39",
     "updatedAt": "2017-06-05 21:51:39",
     "status": "Closed",
+    "private": false,
     "userId": 25
   },
   {
@@ -2302,6 +2499,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-21 00:12:00",
     "updatedAt": "2017-06-21 00:12:00",
     "status": "Closed",
+    "private": false,
     "userId": 5
   },
   {
@@ -2314,6 +2512,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-15 12:47:41",
     "updatedAt": "2017-05-15 12:47:41",
     "status": "Closed",
+    "private": false,
     "userId": 15
   },
   {
@@ -2326,6 +2525,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-18 03:21:18",
     "updatedAt": "2017-05-18 03:21:18",
     "status": "Closed",
+    "private": false,
     "userId": 29
   },
   {
@@ -2338,6 +2538,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-31 11:47:19",
     "updatedAt": "2017-05-31 11:47:19",
     "status": "Closed",
+    "private": false,
     "userId": 19
   },
   {
@@ -2350,6 +2551,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-02 15:25:02",
     "updatedAt": "2017-06-02 15:25:02",
     "status": "Closed",
+    "private": false,
     "userId": 21
   },
   {
@@ -2362,6 +2564,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-11 13:30:07",
     "updatedAt": "2017-05-11 13:30:07",
     "status": "Closed",
+    "private": false,
     "userId": 16
   },
   {
@@ -2374,6 +2577,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-20 02:45:31",
     "updatedAt": "2017-06-20 02:45:31",
     "status": "Closed",
+    "private": false,
     "userId": 19
   },
   {
@@ -2386,6 +2590,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-18 02:59:07",
     "updatedAt": "2017-06-18 02:59:07",
     "status": "Closed",
+    "private": false,
     "userId": 18
   },
   {
@@ -2398,6 +2603,7 @@ module.exports.tickets = [
     "closedAt": "2017-05-06 13:08:24",
     "updatedAt": "2017-05-06 13:08:24",
     "status": "Closed",
+    "private": false,
     "userId": 25
   },
   {
@@ -2410,6 +2616,7 @@ module.exports.tickets = [
     "closedAt": null,
     "updatedAt": "2017-06-26 13:30:36",
     "status": "Claimed",
+    "private": false,
     "userId": 11
   },
   {
@@ -2422,6 +2629,7 @@ module.exports.tickets = [
     "closedAt": null,
     "updatedAt": "2017-06-26 05:36:03",
     "status": "Claimed",
+    "private": false,
     "userId": 28
   },
   {
@@ -2434,6 +2642,7 @@ module.exports.tickets = [
     "closedAt": null,
     "updatedAt": "2017-06-26 07:54:27",
     "status": "Opened",
+    "private": false,
     "userId": 21
   },
   {
@@ -2446,6 +2655,7 @@ module.exports.tickets = [
     "closedAt": null,
     "updatedAt": "2017-06-26 23:42:36",
     "status": "Opened",
+    "private": false,
     "userId": 24
   },
   {
@@ -2458,6 +2668,7 @@ module.exports.tickets = [
     "closedAt": null,
     "updatedAt": "2017-06-26 11:27:28",
     "status": "Claimed",
+    "private": false,
     "userId": 5
   },
   {
@@ -2470,6 +2681,7 @@ module.exports.tickets = [
     "closedAt": "2017-06-26 17:42:16",
     "updatedAt": "2017-06-26 17:42:16",
     "status": "Claimed",
+    "private": false,
     "userId": 11
   },
   {
@@ -2482,6 +2694,7 @@ module.exports.tickets = [
     "closedAt": null,
     "updatedAt": "2017-06-26 11:08:35",
     "status": "Opened",
+    "private": false,
     "userId": 6
   },
   {
@@ -2494,6 +2707,7 @@ module.exports.tickets = [
     "closedAt": null,
     "updatedAt": "2017-06-26 08:50:23",
     "status": "Opened",
+    "private": false,
     "userId": 24
   },
   {
@@ -2506,6 +2720,7 @@ module.exports.tickets = [
     "closedAt": null,
     "updatedAt": "2017-06-26 09:14:08",
     "status": "Claimed",
+    "private": false,
     "userId": 30
   },
   {
@@ -2518,6 +2733,7 @@ module.exports.tickets = [
     "closedAt": null,
     "updatedAt": "2017-06-26 21:02:43",
     "status": "Claimed",
+    "private": false,
     "userId": 29
   },
   {
@@ -2530,6 +2746,7 @@ module.exports.tickets = [
     "closedAt": null,
     "updatedAt": "2017-06-26 06:13:03",
     "status": "Opened",
+    "private": false,
     "userId": 6
   },
   {
@@ -2542,6 +2759,7 @@ module.exports.tickets = [
     "closedAt": null,
     "updatedAt": "2017-06-26 06:13:24",
     "status": "Claimed",
+    "private": false,
     "userId": 28
   },
   {
@@ -2554,6 +2772,7 @@ module.exports.tickets = [
     "closedAt": null,
     "updatedAt": "2017-06-26 01:29:39",
     "status": "Opened",
+    "private": false,
     "userId": 25
   },
   {
@@ -2566,6 +2785,7 @@ module.exports.tickets = [
     "closedAt": null,
     "updatedAt": "2017-06-26 01:03:09",
     "status": "Claimed",
+    "private": false,
     "userId": 6
   },
   {
@@ -2578,6 +2798,7 @@ module.exports.tickets = [
     "closedAt": null,
     "updatedAt": "2017-06-26 00:27:25",
     "status": "Opened",
+    "private": false,
     "userId": 29
   },
   {
@@ -2590,6 +2811,7 @@ module.exports.tickets = [
     "closedAt": null,
     "updatedAt": "2017-06-26 07:47:01",
     "status": "Claimed",
+    "private": false,
     "userId": 8
   },
   {
@@ -2602,6 +2824,7 @@ module.exports.tickets = [
     "closedAt": null,
     "updatedAt": "2017-06-26 09:06:42",
     "status": "Claimed",
+    "private": false,
     "userId": 13
   },
   {
@@ -2614,6 +2837,7 @@ module.exports.tickets = [
     "closedAt": null,
     "updatedAt": "2017-06-26 22:51:05",
     "status": "Claimed",
+    "private": false,
     "userId": 12
   },
   {
@@ -2626,6 +2850,7 @@ module.exports.tickets = [
     "closedAt": "error: Could not access blank value: Use || to provide a default value for blank fields.  Example: (my_field || 0) + 1",
     "updatedAt": "error: Could not access blank value: Use || to provide a default value for blank fields.  Example: (my_field || 0) + 1",
     "status": "Opened",
+    "private": false,
     "userId": 13
   },
   {
@@ -2638,6 +2863,12 @@ module.exports.tickets = [
     "closedAt": null,
     "updatedAt": "2017-06-26 12:18:38",
     "status": "Claimed",
+    "private": false,
     "userId": 26
   }
 ];
+
+module.exports.tickets.map(ticket => {
+  ticket.rating = null;
+  ticket.review = null;
+});

@@ -28,7 +28,7 @@ var findQueuePos = function(tickets, userId) {
   }).sort(function (ticket1, ticket2) {
     return Date.parse(ticket1.createdAt) - Date.parse(ticket2.createdAt);
   }).findIndex(function (ticket) {
-    return ticket.userId == userId;
+    return ticket.userId === userId;
   }) + 1;
 };
 

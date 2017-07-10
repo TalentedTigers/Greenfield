@@ -4,10 +4,10 @@ A help desk application used by Hack Reactor students.
 
 ## Team
 
-  - [David Gould](https://github.com/davidgould112)
-  - [David Vassett](https://github.com/DavidVassett)
-  - [Eric Mai](https://github.com/enmai1988)
-  - [Jacob Penney](https://github.com/OneCent01)
+  - [Azmeer Salleh](https://github.com/azmeer)
+  - [Kenneth Su](https://github.com/ethnographers)
+  - [Sheyda Rezaee](https://github.com/sheydarezaee)
+  - [Wesley Choi](https://github.com/weschoi)
 
 ## Table of Contents
 
@@ -40,12 +40,24 @@ npm install
 
 #### Create and Start Database
 
-The `npm db-create` and `create helpReactor` commands only need to be run once.
+The `npm db-setup` command only needs to be run once. This will create the database, start it, and initialize it.
+
+```sh
+npm run db-setup
+```
+
+The db-setup script is equivalent to:
 
 ```sh
 npm run db-create
 npm run db-start
-createdb helpReator
+npm run db-init
+```
+
+In the event that you just want to start up the database, use the db-start script as follows:
+
+```sh
+npm run db-start
 ```
 
 #### Migrate and Seed Database
@@ -68,12 +80,6 @@ Once you are connected to the database you can you the below query to update a u
 
 ```sh
 UPDATE users SET role='admin' WHERE id=1;
-```
-
-#### Create Database
-
-```sh
-npm run db-create
 ```
 
 ### Setup Redis

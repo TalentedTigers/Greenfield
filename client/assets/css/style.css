@@ -23,27 +23,42 @@ h6:last-child {
   margin-bottom: 0;
 }
 
+
 .navbar {
   margin-bottom: 0;
 }
 
-.navbar-inverse {
-  background-color: #2b3d51;
+.navbar-student {
+  background-color: #860053;
+  border: 0;
+  border-radius: 0;
+  color: #fff
+}
+
+.navbar-admin {
+  background-color: #00D4C4;
+  border: 0;
+  border-radius: 0;
+}
+
+.navbar-mentor {
+  background-color: #007488;
   border: 0;
   border-radius: 0;
 }
 
 .navbar-inverse .navbar-brand {
-  color: #fff;
+  color: white;
 }
 
 .navbar-brand {
-  border: 1px solid #fff;
-  font-weight: 300;
+  border: 1px solid white;
+  font-weight: 700;
   height: auto;
   margin: 19px 0 !important;
   padding: 5px;
   text-transform: uppercase;
+  color: white !important;
 }
 
 .dropdown-menu {
@@ -141,9 +156,11 @@ h6:last-child {
   border-bottom: 2px solid #ccc;
   margin: 0 0 20px 0;
   padding: 0 0 20px 0;
+  /*padding: 0 0 20px 0;*/
 }
 
 #ticket_submission_description {
+  margin-top: 10px;
   height: 34px;
   resize: none;
   transition: all 0.5s ease;
@@ -156,6 +173,10 @@ h6:last-child {
 #ticket_submission_area {
   margin-top: 10px;
 }
+
+/*.feedback{
+  padding: 20px;
+}*/
 
 #wait_time {
   color: white;
@@ -201,6 +222,80 @@ h6:last-child {
   clear: both;
 }
 
+.interactive {
+  display: flex;
+  flex-flow: column;
+  height: 100vh - 40px;
+  width: 100vw;
+  margin: 0px;
+  outline: 1px solid grey;
+}
+
+.isession_button {
+  flex: 0 1 auto;
+}
+
+.iElementContainer {
+  display: flex;
+  flex-flow: row;
+  outline: 1px solid grey;
+}
+
+.leftGroup {
+  display: flex;
+  flex-flow: column;
+  flex-grow: 1;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.whiteboard {
+  display: flex;
+  outline: 1px solid grey;
+  height: 85vh;
+  flex-grow: 3;
+  flex-shrink: 1;
+}
+
+.chat {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  outline: 1px solid grey;
+}
+
+.chatMessages {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  flex-shrink: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.chatBar {
+  position: relative;
+  flex-flow: row;
+  margin-top: auto;
+}
+
+.chatInput {
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 25px;
+}
+
+.sendButton {
+  margin: 0x;
+  margin-top: auto;
+  height: 25px;
+}
+
+.chatEntry {
+  padding: 5px 10px;
+}
+
 .alert {
   margin: 0 0 10px 0;
   padding: 7px 7px 7px 10px;
@@ -226,3 +321,125 @@ h6:last-child {
   border-color: #a94442 !important;
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 6px #ce8483 !important;
 }
+
+.row-3 {
+  display: flex;
+  margin: 3px;
+  justify-content: flex-start;
+}
+
+.star {
+  display: inline-block;
+  border: 1px solid;
+  width: 45px;
+  height: 45px;
+  margin: 4px;
+  text-align: center;
+  background-color: lightblue;
+  opacity: 0.7;
+  border: 3px solid #73AD21;
+  /*line-height: -10px;*/
+}
+
+.star:hover {
+  background-color: lightblue;
+  opacity: 1;
+}
+
+.star:active {
+  border: 4px solid white;
+}
+
+.mentor-section {
+  border: 1px solid;
+  width: 240px;
+  height: 30px;
+  text-align: center;
+  margin-left: 3px;
+
+}
+
+.station {
+  border: 1px solid;
+  width: 80px;
+  height: 30px;
+  text-align: center;
+  background-color: lightblue;
+  opacity: 0.7;
+  /*line-height: -10px;*/
+}
+
+.station:hover {
+  background-color: lightblue;
+  opacity: 1;
+}
+
+.station:active {
+  border: 4px solid white;
+}
+
+
+.row-2 {
+  display: flex;
+  margin: 3px;
+  justify-content: flex-start;
+  margin-left: 83px;
+}
+
+.row-two-station {
+  border: 1px solid;
+  width: 80px;
+  height: 30px;
+}
+
+.section {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.starrow {
+  /*width: 50%;*/
+  /*height: auto;*/
+  width: 270px;
+  height: auto;
+  margin: 20px auto;
+  position: relative;
+
+}
+.modal-header{
+  background-color:#ccc;
+}
+
+span {
+  position: relative;
+  top: 18%;
+}
+
+.letterLine {
+  position: relative;
+  top: 25%
+}
+
+.htable {
+  position: relative;
+  top: 19%;
+}
+.dim {
+  background-color: white;
+  border: 1px Gainsboro solid;
+}
+
+.numberInPair {
+  font-size: 14px;
+  line-height: 19px
+}
+
+#chartdiv {
+  width: 100%;
+  height: 500px;
+}
+
+/*
+.selected-station {
+  background-color: blue;
+}*/
